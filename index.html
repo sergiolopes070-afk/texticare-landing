@@ -315,6 +315,29 @@
        TARIFS
     ══════════════════════════════════════ */
     .tarifs { background: linear-gradient(180deg, #f8fafc 0%, var(--teal-pale) 100%); }
+
+    /* Onglets */
+    .tarif-tabs {
+      display: flex; justify-content: center; gap: 10px;
+      flex-wrap: wrap; margin-bottom: 48px;
+    }
+    .tarif-tab {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: 50px;
+      font-size: 15px; font-weight: 600; cursor: pointer;
+      border: 2px solid var(--gray-100); background: #fff;
+      color: var(--gray-500); transition: all .25s ease;
+    }
+    .tarif-tab:hover { border-color: var(--teal); color: var(--teal); }
+    .tarif-tab.active {
+      background: var(--teal); border-color: var(--teal);
+      color: #fff; box-shadow: 0 4px 16px rgba(0,181,173,.3);
+    }
+    .tarif-tab svg { width: 18px; height: 18px; }
+
+    .tarif-panel { display: none; }
+    .tarif-panel.active { display: block; }
+
     .tarifs-grid {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
     }
@@ -531,6 +554,56 @@
       display: flex; align-items: center; justify-content: center; gap: 6px;
     }
     .form-note svg { width: 14px; height: 14px; color: var(--teal); }
+
+    /* Date picker ergonomique */
+    .rdv-options {
+      display: flex; flex-direction: column; gap: 10px; margin-bottom: 4px;
+    }
+    .rdv-radio {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 18px; border: 2px solid var(--gray-100);
+      border-radius: 12px; cursor: pointer; transition: all .2s;
+    }
+    .rdv-radio:hover { border-color: var(--teal); }
+    .rdv-radio input[type="radio"] { display: none; }
+    .rdv-radio .radio-dot {
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 2px solid var(--gray-300); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: all .2s;
+    }
+    .rdv-radio input[type="radio"]:checked ~ .radio-content .radio-dot,
+    .rdv-radio.checked .radio-dot {
+      border-color: var(--teal); background: var(--teal);
+    }
+    .rdv-radio.checked { border-color: var(--teal); background: var(--teal-pale); }
+    .rdv-radio .radio-dot::after {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: #fff; opacity: 0; transition: opacity .2s;
+    }
+    .rdv-radio.checked .radio-dot::after { opacity: 1; }
+    .rdv-radio .radio-emoji { font-size: 18px; }
+    .rdv-radio .radio-label { font-size: 15px; font-weight: 600; color: var(--navy); }
+    .rdv-radio .radio-sub { font-size: 13px; color: var(--gray-500); }
+    .rdv-radio.urgent-option { border-color: #fcd34d; background: #fffbeb; }
+    .rdv-radio.urgent-option .radio-label { color: #92400e; }
+
+    .date-picker-wrap {
+      display: none; margin-top: 12px;
+      background: var(--gray-50); border-radius: 12px; padding: 16px;
+      border: 1px solid var(--gray-100);
+    }
+    .date-picker-wrap.show { display: block; }
+    .date-time-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .date-time-row .form-group { margin-bottom: 0; }
+    .date-optional { font-size: 12px; color: var(--gray-500); margin-top: 8px; }
+    input[type="date"], input[type="time"] {
+      padding: 14px 18px; border: 2px solid var(--gray-100);
+      border-radius: 12px; font-size: 15px; font-family: inherit;
+      color: var(--gray-700); transition: border-color .2s;
+      background: #fff; outline: none; width: 100%;
+    }
+    input[type="date"]:focus, input[type="time"]:focus { border-color: var(--teal); }
 
     /* ══════════════════════════════════════
        FOOTER
@@ -996,8 +1069,27 @@
           Tarifs clairs &amp; transparents
         </div>
         <h2 class="section-title">Tarifs nettoyage canapé <span>& matelas à domicile</span></h2>
-        <p class="section-sub">Prix fixes, sans mauvaise surprise. Nettoyage canapé tissu à domicile dès 79€. Devis personnalisé gratuit pour les grandes surfaces.</p>
+        <p class="section-sub">Prix fixes, sans mauvaise surprise. Sélectionnez votre type de prestation pour voir les tarifs correspondants.</p>
       </div>
+
+      <!-- Onglets -->
+      <div class="tarif-tabs">
+        <button class="tarif-tab active" onclick="switchTab('canape', this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="8" width="20" height="10" rx="4"/><rect x="5" y="8" width="14" height="6" rx="3"/><rect x="1" y="11" width="4" height="6" rx="2"/><rect x="19" y="11" width="4" height="6" rx="2"/></svg>
+          Canapé & sofa
+        </button>
+        <button class="tarif-tab" onclick="switchTab('matelas', this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="12" rx="4"/><path d="M2 11 Q12 7 22 11"/><line x1="6" y1="19" x2="6" y2="22"/><line x1="18" y1="19" x2="18" y2="22"/></svg>
+          Matelas
+        </button>
+        <button class="tarif-tab" onclick="switchTab('tapis', this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="4" x2="9" y2="20"/><line x1="15" y1="4" x2="15" y2="20"/></svg>
+          Tapis & moquette
+        </button>
+      </div>
+
+      <!-- Panel Canapé -->
+      <div class="tarif-panel active" id="panel-canape">
       <div class="tarifs-grid">
 
         <!-- Offre 1 -->
@@ -1054,7 +1146,7 @@
             <div class="tarif-desc">Canapé 3–4 places</div>
             <div class="tarif-price">
               <span class="currency">€</span>
-              <span class="amount">99</span>
+              <span class="amount">89</span>
               <span class="per">/ prestation</span>
             </div>
           </div>
@@ -1100,7 +1192,7 @@
             <div class="tarif-desc">Canapé d'angle &amp; XL</div>
             <div class="tarif-price">
               <span class="currency">€</span>
-              <span class="amount">139</span>
+              <span class="amount">119</span>
               <span class="per">/ prestation</span>
             </div>
           </div>
@@ -1140,8 +1232,159 @@
         </div>
 
       </div>
+      </div><!-- fin panel-canape -->
+
+      <!-- Panel Matelas -->
+      <div class="tarif-panel" id="panel-matelas">
+        <div class="tarifs-grid">
+          <div class="tarif-card">
+            <div class="tarif-header">
+              <div class="tarif-name">Simple</div>
+              <div class="tarif-desc">Matelas 1 personne (90×190)</div>
+              <div class="tarif-price">
+                <span class="currency">€</span>
+                <span class="amount">69</span>
+                <span class="per">/ prestation</span>
+              </div>
+            </div>
+            <div class="tarif-body">
+              <ul class="tarif-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Nettoyage vapeur en profondeur</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Élimination des acariens</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Produits écologiques inclus</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Déodorisation &amp; désinfection</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Garantie satisfaction</li>
+                <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Traitement anti-acariens renforcé</li>
+                <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Protection longue durée</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline tarif-cta">Réserver</a>
+            </div>
+          </div>
+          <div class="tarif-card popular">
+            <div class="popular-badge">⭐ Offre la plus choisie</div>
+            <div class="tarif-header">
+              <div class="tarif-name">Double</div>
+              <div class="tarif-desc">Matelas 2 personnes (140×190)</div>
+              <div class="tarif-price">
+                <span class="currency">€</span>
+                <span class="amount">79</span>
+                <span class="per">/ prestation</span>
+              </div>
+            </div>
+            <div class="tarif-body">
+              <ul class="tarif-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Nettoyage vapeur en profondeur</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Élimination des acariens</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Produits écologiques inclus</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Déodorisation &amp; désinfection</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Garantie satisfaction</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Traitement anti-acariens renforcé</li>
+                <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Protection longue durée</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary tarif-cta">Réserver</a>
+            </div>
+          </div>
+          <div class="tarif-card">
+            <div class="tarif-header">
+              <div class="tarif-name">King Size</div>
+              <div class="tarif-desc">Matelas 160×200 et +</div>
+              <div class="tarif-price">
+                <span class="currency">€</span>
+                <span class="amount">109</span>
+                <span class="per">/ prestation</span>
+              </div>
+            </div>
+            <div class="tarif-body">
+              <ul class="tarif-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Nettoyage vapeur en profondeur</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Élimination des acariens</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Produits écologiques inclus</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Déodorisation &amp; désinfection</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Garantie satisfaction</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Traitement anti-acariens renforcé</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Protection longue durée</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline tarif-cta">Réserver</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- fin panel-matelas -->
+
+      <!-- Panel Tapis -->
+      <div class="tarif-panel" id="panel-tapis">
+        <div class="tarifs-grid">
+          <div class="tarif-card">
+            <div class="tarif-header">
+              <div class="tarif-name">Petit tapis</div>
+              <div class="tarif-desc">Jusqu'à 4 m²</div>
+              <div class="tarif-price">
+                <span class="currency">€</span>
+                <span class="amount">49</span>
+                <span class="per">/ prestation</span>
+              </div>
+            </div>
+            <div class="tarif-body">
+              <ul class="tarif-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Nettoyage vapeur professionnel</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Produits adaptés à la matière</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Déodorisation incluse</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Garantie satisfaction</li>
+                <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Traitement anti-taches premium</li>
+                <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Protection fibres longue durée</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline tarif-cta">Réserver</a>
+            </div>
+          </div>
+          <div class="tarif-card popular">
+            <div class="popular-badge">⭐ Offre la plus choisie</div>
+            <div class="tarif-header">
+              <div class="tarif-name">Tapis moyen</div>
+              <div class="tarif-desc">De 4 à 9 m²</div>
+              <div class="tarif-price">
+                <span class="currency">€</span>
+                <span class="amount">79</span>
+                <span class="per">/ prestation</span>
+              </div>
+            </div>
+            <div class="tarif-body">
+              <ul class="tarif-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Nettoyage vapeur professionnel</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Produits adaptés à la matière</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Déodorisation incluse</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Garantie satisfaction</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Traitement anti-taches premium</li>
+                <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Protection fibres longue durée</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary tarif-cta">Réserver</a>
+            </div>
+          </div>
+          <div class="tarif-card">
+            <div class="tarif-header">
+              <div class="tarif-name">Grand tapis</div>
+              <div class="tarif-desc">Plus de 9 m²</div>
+              <div class="tarif-price">
+                <span class="currency">€</span>
+                <span class="amount">119</span>
+                <span class="per">/ prestation</span>
+              </div>
+            </div>
+            <div class="tarif-body">
+              <ul class="tarif-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Nettoyage vapeur professionnel</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Produits adaptés à la matière</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Déodorisation incluse</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Garantie satisfaction</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Traitement anti-taches premium</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Protection fibres longue durée</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline tarif-cta">Réserver</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- fin panel-tapis -->
+
       <p style="text-align:center;margin-top:32px;font-size:15px;color:var(--gray-500);">
-        Vous avez une demande spécifique (matelas, chaises, sièges auto) ?
+        Vous avez une demande spécifique (chaises, sièges auto, combinaison) ?
         <a href="#contact" style="color:var(--teal);font-weight:600;">Demandez un devis personnalisé →</a>
       </p>
     </div>
@@ -1495,6 +1738,53 @@
                 <option value="autre">Autre / Combinaison</option>
               </select>
             </div>
+            <!-- Date & disponibilité -->
+            <div class="form-group">
+              <label>Quand souhaitez-vous l'intervention ?</label>
+              <div class="rdv-options">
+                <label class="rdv-radio urgent-option" id="rdv-urgent">
+                  <input type="radio" name="disponibilite" value="urgent" onchange="handleRdv(this)" />
+                  <span class="radio-emoji">🚨</span>
+                  <div>
+                    <div class="radio-label">Urgent — intervention sous 48h</div>
+                    <div class="radio-sub">Nous vous rappelons dans l'heure</div>
+                  </div>
+                  <span class="radio-dot" style="margin-left:auto;"></span>
+                </label>
+                <label class="rdv-radio" id="rdv-date">
+                  <input type="radio" name="disponibilite" value="date" onchange="handleRdv(this)" />
+                  <span class="radio-emoji">📅</span>
+                  <div>
+                    <div class="radio-label">Je choisis une date</div>
+                    <div class="radio-sub">Sélectionnez votre créneau préféré</div>
+                  </div>
+                  <span class="radio-dot" style="margin-left:auto;"></span>
+                </label>
+                <div class="date-picker-wrap" id="datePicker">
+                  <div class="date-time-row">
+                    <div class="form-group">
+                      <label for="date_souhaitee">Date souhaitée</label>
+                      <input type="date" id="date_souhaitee" name="date_souhaitee" />
+                    </div>
+                    <div class="form-group">
+                      <label for="heure_souhaitee">Heure (optionnel)</label>
+                      <input type="time" id="heure_souhaitee" name="heure_souhaitee" />
+                    </div>
+                  </div>
+                  <p class="date-optional">💡 L'heure est indicative, nous confirmons le créneau exact par téléphone.</p>
+                </div>
+                <label class="rdv-radio checked" id="rdv-contact">
+                  <input type="radio" name="disponibilite" value="recontacter" onchange="handleRdv(this)" checked />
+                  <span class="radio-emoji">📞</span>
+                  <div>
+                    <div class="radio-label">Je préfère être recontacté(e)</div>
+                    <div class="radio-sub">Nous vous appelons pour fixer ensemble</div>
+                  </div>
+                  <span class="radio-dot" style="margin-left:auto;"></span>
+                </label>
+              </div>
+            </div>
+
             <div class="form-group">
               <label for="message">Précisions (optionnel)</label>
               <textarea id="message" name="message" placeholder="Type de tissu, taches particulières, accès difficile..."></textarea>
@@ -1705,6 +1995,22 @@
       el.style.transition = 'opacity .5s ease, transform .5s ease';
       observer.observe(el);
     });
+
+    // Onglets tarifs
+    function switchTab(tab, btn) {
+      document.querySelectorAll('.tarif-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tarif-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+    }
+
+    // Date picker RDV
+    function handleRdv(radio) {
+      document.querySelectorAll('.rdv-radio').forEach(r => r.classList.remove('checked'));
+      radio.closest('.rdv-radio').classList.add('checked');
+      const picker = document.getElementById('datePicker');
+      picker.classList.toggle('show', radio.value === 'date');
+    }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
