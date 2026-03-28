@@ -1447,7 +1447,17 @@
 
         <div class="contact-form">
           <h3 style="font-size:22px;font-weight:800;color:var(--navy);margin-bottom:28px;">Votre devis gratuit</h3>
-          <form id="devisForm" onsubmit="handleSubmit(event)">
+          <form id="devisForm"
+            action="https://formsubmit.co/texticare@gmail.com"
+            method="POST">
+
+            <!-- Formsubmit config -->
+            <input type="hidden" name="_subject" value="Nouvelle demande de devis – TextiCare" />
+            <input type="hidden" name="_next" value="https://texticare-preview.vercel.app/merci.html" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style="display:none" />
+
             <div class="form-row">
               <div class="form-group">
                 <label for="prenom">Prénom *</label>
