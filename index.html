@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TextiCare – Nettoyage Canapé & Textile à Domicile | Résultats Garantis</title>
+  <meta name="description" content="TextiCare, spécialiste du nettoyage de canapés, matelas et textiles à domicile. Produits écologiques, résultats professionnels. Devis gratuit en 2 min. ✓ Satisfaction garantie." />
+  <meta name="keywords" content="nettoyage canapé domicile, nettoyage matelas, nettoyage textile, canapé propre, texticare" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="TextiCare – Nettoyage Canapé & Textile à Domicile" />
+  <meta property="og:description" content="Spécialiste du nettoyage de canapés et textiles à domicile. Produits écologiques, résultats garantis." />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TextiCare",
+    "description": "Spécialiste du nettoyage de canapés, matelas et textiles à domicile",
+    "telephone": "+33600000000",
+    "priceRange": "€€",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "214"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; background: #fff; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── VARIABLES ── */
+    :root {
+      --navy:       #1b3070;
+      --navy-dark:  #122050;
+      --teal:       #00b5ad;
+      --teal-dark:  #009990;
+      --teal-light: #e0f7f6;
+      --teal-pale:  #f0fbfb;
+      --white:      #ffffff;
+      --gray-50:    #f8fafc;
+      --gray-100:   #f1f5f9;
+      --gray-300:   #cbd5e1;
+      --gray-500:   #64748b;
+      --gray-700:   #334155;
+      --gold:       #f59e0b;
+      --radius:     14px;
+      --shadow:     0 4px 24px rgba(27,48,112,.10);
+      --shadow-lg:  0 12px 48px rgba(27,48,112,.16);
+    }
+
+    /* ── UTILITIES ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section-sm { padding: 64px 0; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--teal-light); color: var(--teal-dark);
+      font-size: 13px; font-weight: 600; padding: 6px 14px;
+      border-radius: 50px; letter-spacing: .4px; margin-bottom: 20px;
+    }
+    .badge svg { width: 14px; height: 14px; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800; color: var(--navy);
+      line-height: 1.2; margin-bottom: 16px;
+    }
+    .section-title span { color: var(--teal); }
+    .section-sub {
+      font-size: 17px; color: var(--gray-500);
+      line-height: 1.7; max-width: 600px; margin: 0 auto 56px;
+    }
+    .text-center { text-align: center; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 16px 32px; border-radius: 50px;
+      font-size: 16px; font-weight: 700; cursor: pointer;
+      border: 2px solid transparent; transition: all .25s ease;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--teal); color: #fff;
+      box-shadow: 0 4px 20px rgba(0,181,173,.35);
+    }
+    .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,181,173,.4); }
+    .btn-outline {
+      background: transparent; color: var(--navy);
+      border-color: var(--navy);
+    }
+    .btn-outline:hover { background: var(--navy); color: #fff; }
+    .btn-white {
+      background: #fff; color: var(--navy); font-weight: 800;
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,.18); }
+
+    /* ── STARS ── */
+    .stars { color: var(--gold); font-size: 18px; letter-spacing: 2px; }
+
+    /* ══════════════════════════════════════
+       NAV
+    ══════════════════════════════════════ */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-100);
+      transition: box-shadow .3s;
+    }
+    .nav.scrolled { box-shadow: var(--shadow); }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px; gap: 24px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0;
+    }
+    .nav-logo img { height: 52px; width: auto; display: block; }
+    .logo-text { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 800; line-height: 1; }
+    .logo-text .texti { color: var(--navy); }
+    .logo-text .care  { color: var(--teal); }
+    .nav-links {
+      display: flex; align-items: center; gap: 32px; list-style: none;
+    }
+    .nav-links a { font-size: 15px; font-weight: 500; color: var(--gray-700); transition: color .2s; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-phone {
+      display: flex; align-items: center; gap: 8px;
+      font-weight: 700; color: var(--navy); font-size: 15px;
+    }
+    .nav-phone svg { color: var(--teal); }
+    .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-burger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: .3s; }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    .hero {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, #f0fbfb 0%, #e8f4fd 50%, #f8fafc 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -120px; right: -120px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,181,173,.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -80px; left: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(27,48,112,.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 64px; position: relative; z-index: 1;
+    }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--teal-light); color: var(--teal-dark);
+      font-size: 13px; font-weight: 700; padding: 8px 18px;
+      border-radius: 50px; margin-bottom: 24px;
+      animation: fadeInDown .6s ease both;
+    }
+    .hero-label::before { content: '✦'; }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 800; color: var(--navy);
+      line-height: 1.12; margin-bottom: 24px;
+      animation: fadeInUp .7s ease .1s both;
+    }
+    .hero-title span { color: var(--teal); }
+    .hero-sub {
+      font-size: 18px; color: var(--gray-500);
+      line-height: 1.75; margin-bottom: 40px;
+      animation: fadeInUp .7s ease .2s both;
+    }
+    .hero-ctas {
+      display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 48px;
+      animation: fadeInUp .7s ease .3s both;
+    }
+    .hero-trust {
+      display: flex; flex-wrap: wrap; gap: 20px;
+      animation: fadeInUp .7s ease .4s both;
+    }
+    .hero-trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 14px; font-weight: 600; color: var(--gray-700);
+    }
+    .hero-trust-item svg { color: var(--teal); width: 18px; height: 18px; }
+
+    .hero-visual {
+      display: flex; justify-content: center; align-items: center;
+      position: relative; animation: fadeInRight .8s ease .2s both;
+    }
+    .hero-card {
+      background: #fff; border-radius: 24px; padding: 40px;
+      box-shadow: var(--shadow-lg); text-align: center;
+      position: relative; z-index: 1;
+    }
+    .hero-card-icon {
+      width: 100px; height: 100px; background: var(--teal-light);
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; margin: 0 auto 24px;
+    }
+    .hero-card-icon svg { width: 56px; height: 56px; color: var(--teal); }
+    .hero-card h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .hero-card p { font-size: 15px; color: var(--gray-500); line-height: 1.6; }
+    .hero-rating {
+      margin-top: 24px; padding-top: 24px;
+      border-top: 1px solid var(--gray-100);
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+    }
+    .hero-rating-text { font-size: 14px; color: var(--gray-700); }
+    .hero-rating-text strong { color: var(--navy); font-size: 18px; }
+
+    .floating-badge {
+      position: absolute; background: #fff; border-radius: 16px;
+      padding: 12px 18px; box-shadow: var(--shadow);
+      font-size: 14px; font-weight: 600; color: var(--navy);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .floating-badge.top-left { top: -20px; left: -30px; animation: float 3s ease-in-out infinite; }
+    .floating-badge.bottom-right { bottom: -20px; right: -30px; animation: float 3s ease-in-out infinite .5s; }
+    .floating-badge .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--teal); }
+
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    @keyframes fadeInDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeInRight { from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:translateX(0)} }
+
+    /* ══════════════════════════════════════
+       BANNER REASSURANCE
+    ══════════════════════════════════════ */
+    .banner-strip {
+      background: var(--navy); padding: 20px 0;
+      overflow: hidden;
+    }
+    .banner-strip-inner {
+      display: flex; gap: 48px; align-items: center;
+      animation: marquee 20s linear infinite;
+      white-space: nowrap;
+    }
+    .banner-item {
+      display: flex; align-items: center; gap: 10px;
+      color: #fff; font-size: 14px; font-weight: 600; flex-shrink: 0;
+    }
+    .banner-item svg { color: var(--teal); flex-shrink: 0; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ══════════════════════════════════════
+       SERVICES
+    ══════════════════════════════════════ */
+    .services { background: var(--gray-50); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    }
+    .service-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 36px 28px; text-align: center;
+      border: 2px solid var(--gray-100);
+      transition: all .3s ease; cursor: default;
+    }
+    .service-card:hover {
+      border-color: var(--teal); transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .service-icon {
+      width: 72px; height: 72px; background: var(--teal-light);
+      border-radius: 20px; display: flex; align-items: center;
+      justify-content: center; margin: 0 auto 20px;
+      transition: background .3s;
+    }
+    .service-card:hover .service-icon { background: var(--teal); }
+    .service-icon svg { width: 36px; height: 36px; color: var(--teal); transition: color .3s; }
+    .service-card:hover .service-icon svg { color: #fff; }
+    .service-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .service-card p { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
+
+    /* ══════════════════════════════════════
+       AVANTAGES
+    ══════════════════════════════════════ */
+    .avantages-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    }
+    .avantage-item {
+      display: flex; gap: 20px; align-items: flex-start;
+    }
+    .avantage-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--teal-light); display: flex;
+      align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .avantage-icon svg { width: 26px; height: 26px; color: var(--teal); }
+    .avantage-item h4 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .avantage-item p { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
+
+    /* ══════════════════════════════════════
+       TARIFS
+    ══════════════════════════════════════ */
+    .tarifs { background: linear-gradient(180deg, #f8fafc 0%, var(--teal-pale) 100%); }
+    .tarifs-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    .tarif-card {
+      background: #fff; border-radius: 24px;
+      border: 2px solid var(--gray-100);
+      overflow: hidden; transition: all .3s ease; position: relative;
+    }
+    .tarif-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); border-color: var(--teal); }
+    .tarif-card.popular {
+      border-color: var(--teal);
+      box-shadow: 0 8px 40px rgba(0,181,173,.2);
+      transform: scale(1.03);
+    }
+    .tarif-card.popular:hover { transform: scale(1.03) translateY(-6px); }
+    .popular-badge {
+      position: absolute; top: 0; left: 0; right: 0;
+      background: var(--teal); color: #fff;
+      text-align: center; padding: 8px;
+      font-size: 13px; font-weight: 700; letter-spacing: .5px;
+    }
+    .tarif-header {
+      padding: 32px 32px 24px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .tarif-card.popular .tarif-header { padding-top: 48px; }
+    .tarif-name {
+      font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 4px;
+    }
+    .tarif-desc { font-size: 14px; color: var(--gray-500); margin-bottom: 20px; }
+    .tarif-price {
+      display: flex; align-items: flex-end; gap: 4px;
+    }
+    .tarif-price .amount {
+      font-size: 52px; font-weight: 900; color: var(--navy); line-height: 1;
+    }
+    .tarif-price .currency { font-size: 24px; font-weight: 700; color: var(--teal); line-height: 1.5; }
+    .tarif-price .per { font-size: 14px; color: var(--gray-500); margin-bottom: 4px; }
+    .tarif-body { padding: 28px 32px 32px; }
+    .tarif-features { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+    .tarif-features li {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 15px; color: var(--gray-700);
+    }
+    .tarif-features li svg { width: 18px; height: 18px; color: var(--teal); flex-shrink: 0; }
+    .tarif-features li.disabled { color: var(--gray-300); }
+    .tarif-features li.disabled svg { color: var(--gray-300); }
+    .tarif-cta { display: block; width: 100%; text-align: center; }
+
+    /* ══════════════════════════════════════
+       PROCESS
+    ══════════════════════════════════════ */
+    .process { background: var(--navy); color: #fff; }
+    .process .section-title { color: #fff; }
+    .process .section-sub { color: rgba(255,255,255,.65); }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute; top: 40px; left: 10%; right: 10%;
+      height: 2px; background: rgba(0,181,173,.3); z-index: 0;
+    }
+    .process-step { text-align: center; position: relative; z-index: 1; }
+    .step-num {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: var(--teal); color: #fff;
+      font-size: 26px; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px; border: 4px solid var(--navy);
+      box-shadow: 0 0 0 4px rgba(0,181,173,.3);
+    }
+    .process-step h4 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.6; }
+
+    /* ══════════════════════════════════════
+       AVIS / TESTIMONIALS
+    ══════════════════════════════════════ */
+    .avis { background: var(--gray-50); }
+    .avis-header {
+      display: flex; align-items: center; justify-content: center;
+      gap: 48px; margin-bottom: 56px;
+    }
+    .google-rating {
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+    }
+    .google-logo { font-size: 28px; font-weight: 700; }
+    .google-logo .g { color: #4285f4; }
+    .google-logo .o1 { color: #ea4335; }
+    .google-logo .o2 { color: #fbbc04; }
+    .google-logo .g2 { color: #4285f4; }
+    .google-logo .l { color: #34a853; }
+    .google-logo .e { color: #ea4335; }
+    .rating-big { font-size: 48px; font-weight: 900; color: var(--navy); line-height: 1; }
+    .rating-count { font-size: 14px; color: var(--gray-500); }
+    .avis-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .avis-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 28px; border: 1px solid var(--gray-100);
+      transition: box-shadow .3s;
+    }
+    .avis-card:hover { box-shadow: var(--shadow); }
+    .avis-top { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .avis-avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 800; color: #fff; flex-shrink: 0;
+    }
+    .avis-name { font-size: 16px; font-weight: 700; color: var(--navy); }
+    .avis-date { font-size: 12px; color: var(--gray-500); }
+    .avis-card p { font-size: 15px; color: var(--gray-700); line-height: 1.7; }
+
+    /* ══════════════════════════════════════
+       GARANTIE BANNER
+    ══════════════════════════════════════ */
+    .garantie {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: #fff; padding: 80px 0; text-align: center;
+    }
+    .garantie h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 42px); font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .garantie p { font-size: 18px; opacity: .9; margin-bottom: 40px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .garantie-items {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-bottom: 48px;
+    }
+    .garantie-item {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .garantie-item svg { width: 40px; height: 40px; opacity: .9; }
+    .garantie-item span { font-size: 14px; font-weight: 600; opacity: .9; }
+
+    /* ══════════════════════════════════════
+       FAQ
+    ══════════════════════════════════════ */
+    .faq { background: #fff; }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      border: 2px solid var(--gray-100); border-radius: var(--radius);
+      overflow: hidden; transition: border-color .3s;
+    }
+    .faq-item.open { border-color: var(--teal); }
+    .faq-q {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 28px; cursor: pointer;
+      font-size: 16px; font-weight: 600; color: var(--navy);
+      user-select: none; gap: 16px;
+    }
+    .faq-q:hover { color: var(--teal); }
+    .faq-icon {
+      width: 32px; height: 32px; border-radius: 50%; background: var(--gray-100);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      transition: all .3s;
+    }
+    .faq-item.open .faq-icon { background: var(--teal); transform: rotate(45deg); }
+    .faq-icon svg { width: 16px; height: 16px; color: var(--navy); }
+    .faq-item.open .faq-icon svg { color: #fff; }
+    .faq-a {
+      padding: 0 28px; max-height: 0; overflow: hidden;
+      font-size: 15px; color: var(--gray-500); line-height: 1.75;
+      transition: all .35s ease;
+    }
+    .faq-a.open { max-height: 300px; padding: 0 28px 24px; }
+
+    /* ══════════════════════════════════════
+       CONTACT
+    ══════════════════════════════════════ */
+    .contact { background: var(--gray-50); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
+    .contact-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3.5vw, 38px); font-weight: 800;
+      color: var(--navy); margin-bottom: 16px;
+    }
+    .contact-info h2 span { color: var(--teal); }
+    .contact-info p { font-size: 16px; color: var(--gray-500); line-height: 1.75; margin-bottom: 40px; }
+    .contact-detail {
+      display: flex; align-items: center; gap: 16px; margin-bottom: 20px;
+    }
+    .contact-detail-icon {
+      width: 48px; height: 48px; background: var(--teal-light); border-radius: 14px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contact-detail-icon svg { width: 22px; height: 22px; color: var(--teal); }
+    .contact-detail-label { font-size: 12px; color: var(--gray-500); font-weight: 500; }
+    .contact-detail-value { font-size: 16px; font-weight: 700; color: var(--navy); }
+
+    .contact-form {
+      background: #fff; border-radius: 24px; padding: 48px;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .form-group label { font-size: 14px; font-weight: 600; color: var(--navy); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px 18px; border: 2px solid var(--gray-100);
+      border-radius: 12px; font-size: 15px; font-family: inherit;
+      color: var(--gray-700); transition: border-color .2s;
+      background: #fff; outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--teal); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { width: 100%; padding: 18px; font-size: 16px; }
+    .form-note {
+      text-align: center; margin-top: 12px;
+      font-size: 13px; color: var(--gray-500);
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .form-note svg { width: 14px; height: 14px; color: var(--teal); }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    .footer { background: var(--navy-dark); color: rgba(255,255,255,.75); padding: 64px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .logo-text { font-size: 28px; margin-bottom: 16px; display: block; }
+    .footer-brand p { font-size: 15px; line-height: 1.75; margin-bottom: 24px; }
+    .footer-social { display: flex; gap: 12px; }
+    .social-btn {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(255,255,255,.1); display: flex;
+      align-items: center; justify-content: center;
+      transition: background .2s;
+    }
+    .social-btn:hover { background: var(--teal); }
+    .social-btn svg { width: 18px; height: 18px; color: #fff; }
+    .footer-col h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 14px; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--teal); }
+    .footer-newsletter p { font-size: 14px; margin-bottom: 16px; }
+    .newsletter-form { display: flex; gap: 8px; }
+    .newsletter-form input {
+      flex: 1; padding: 12px 16px; border: none;
+      border-radius: 10px; font-size: 14px;
+      background: rgba(255,255,255,.1); color: #fff; outline: none;
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,.4); }
+    .newsletter-form button {
+      padding: 12px 20px; background: var(--teal); color: #fff;
+      border: none; border-radius: 10px; font-weight: 700;
+      cursor: pointer; font-size: 14px; transition: background .2s;
+    }
+    .newsletter-form button:hover { background: var(--teal-dark); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding: 24px 0; display: flex;
+      align-items: center; justify-content: space-between;
+      font-size: 13px; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom-links { display: flex; gap: 24px; }
+    .footer-bottom-links a:hover { color: var(--teal); }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-visual { display: none; }
+      .hero-ctas { justify-content: center; }
+      .hero-trust { justify-content: center; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .avantages-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .nav-links { display: none; }
+      .nav-burger { display: flex; }
+      .tarifs-grid { grid-template-columns: 1fr; }
+      .tarif-card.popular { transform: scale(1); }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-steps::before { display: none; }
+      .avis-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form { padding: 28px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .avantages-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+    }
+
+    /* Mobile nav open */
+    .nav-mobile-open .nav-links {
+      display: flex; flex-direction: column; position: absolute;
+      top: 72px; left: 0; right: 0; background: #fff;
+      padding: 24px; border-bottom: 1px solid var(--gray-100);
+      box-shadow: var(--shadow);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <img src="logo.png" alt="TextiCare – Nettoyage canapé à domicile" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#process">Comment ça marche</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <a href="tel:+33600000000" class="nav-phone">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 5.18a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            06 00 00 00 00
+          </a>
+          <a href="#contact" class="btn btn-primary" style="padding:12px 24px;font-size:14px;">Devis gratuit</a>
+        </div>
+
+        <div class="nav-burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-label">Nettoyage professionnel à domicile</div>
+          <h1 class="hero-title">
+            Votre canapé,<br>
+            <span>comme neuf</span><br>
+            en 2 heures.
+          </h1>
+          <p class="hero-sub">
+            TextiCare intervient chez vous pour nettoyer en profondeur vos canapés, matelas et textiles. Produits 100% écologiques, résultats visibles immédiatement — ou on revient gratuitement.
+          </p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary" style="font-size:17px;padding:18px 36px;">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+              </svg>
+              Devis gratuit en 2 min
+            </a>
+            <a href="tel:+33600000000" class="btn btn-outline">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 5.18a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              Appeler maintenant
+            </a>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Paiement sur place
+            </div>
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Satisfaction garantie
+            </div>
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Sans déplacement préalable
+            </div>
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Produits écologiques
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-icon">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="8" y="28" width="48" height="22" rx="6"/>
+                <rect x="16" y="28" width="32" height="12" rx="5"/>
+                <rect x="4" y="34" width="10" height="14" rx="5"/>
+                <rect x="50" y="34" width="10" height="14" rx="5"/>
+                <line x1="18" y1="50" x2="18" y2="58" stroke-linecap="round"/>
+                <line x1="46" y1="50" x2="46" y2="58" stroke-linecap="round"/>
+                <path d="M32 10 L33.2 14 L37 15.2 L33.2 16.5 L32 20.5 L30.8 16.5 L27 15.2 L30.8 14 Z" fill="#00b5ad" stroke="none"/>
+              </svg>
+            </div>
+            <h3>Nettoyage vapeur professionnel</h3>
+            <p>Technologie extracteur + vapeur. Élimine 99,9% des allergènes, acariens et bactéries.</p>
+            <div class="hero-rating">
+              <div>
+                <div class="stars">★★★★★</div>
+                <div class="hero-rating-text"><strong>4.9</strong> / 5 · <span>214 avis Google</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-badge top-left">
+            <div class="dot"></div>
+            <span>+500 clients satisfaits</span>
+          </div>
+          <div class="floating-badge bottom-right">
+            <div class="dot"></div>
+            <span>Intervention sous 48h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BANNER STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="banner-strip">
+    <div style="overflow:hidden;">
+      <div class="banner-strip-inner">
+        <!-- Items repeated for loop -->
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Satisfaction 100% garantie
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Produits écologiques &amp; non toxiques
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Sans danger pour les enfants et animaux
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Intervention rapide sous 48h
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Devis gratuit et sans engagement
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Paiement uniquement après intervention
+        </div>
+        <!-- Repeat for infinite scroll -->
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Satisfaction 100% garantie
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Produits écologiques &amp; non toxiques
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Sans danger pour les enfants et animaux
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Intervention rapide sous 48h
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Devis gratuit et sans engagement
+        </div>
+        <div class="banner-item">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Paiement uniquement après intervention
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════════════ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Nos prestations
+        </div>
+        <h2 class="section-title">Ce que nous <span>nettoyons</span></h2>
+        <p class="section-sub">Nous intervenons sur tous vos textiles à domicile, avec le matériel et les produits adaptés à chaque surface.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="8" y="28" width="48" height="20" rx="6"/>
+              <rect x="16" y="28" width="32" height="12" rx="5"/>
+              <rect x="4" y="34" width="10" height="12" rx="5"/>
+              <rect x="50" y="34" width="10" height="12" rx="5"/>
+              <line x1="18" y1="48" x2="18" y2="56" stroke-linecap="round"/>
+              <line x1="46" y1="48" x2="46" y2="56" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Canapé & sofa</h3>
+          <p>Tissu, cuir, microfibre, velours. Nettoyage vapeur en profondeur pour un résultat impeccable.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="6" y="24" width="52" height="28" rx="8"/>
+              <path d="M6 32 Q32 20 58 32"/>
+              <line x1="16" y1="52" x2="16" y2="58" stroke-linecap="round"/>
+              <line x1="48" y1="52" x2="48" y2="58" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Matelas</h3>
+          <p>Élimination des acariens, taches et odeurs. Séchage rapide pour reprendre votre routine.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="12" y="16" width="18" height="30" rx="4"/>
+              <rect x="34" y="16" width="18" height="30" rx="4"/>
+              <path d="M12 28 Q21 22 30 28"/>
+              <path d="M34 28 Q43 22 52 28"/>
+              <line x1="16" y1="46" x2="16" y2="54" stroke-linecap="round"/>
+              <line x1="24" y1="46" x2="24" y2="54" stroke-linecap="round"/>
+              <line x1="40" y1="46" x2="40" y2="54" stroke-linecap="round"/>
+              <line x1="48" y1="46" x2="48" y2="54" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Chaises & fauteuils</h3>
+          <p>Salle à manger, bureau ou salon — nous traitons toutes vos assises en tissu.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="8" y="12" width="48" height="36" rx="6"/>
+              <rect x="14" y="18" width="36" height="24" rx="4"/>
+              <circle cx="32" cy="52" r="4"/>
+              <line x1="32" y1="48" x2="32" y2="56" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Sièges auto</h3>
+          <p>Intérieur de véhicule complet. Cuir, tissus, tapis. Résultat showroom garanti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       AVANTAGES
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="avantages" style="background:#fff;">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Pourquoi TextiCare
+        </div>
+        <h2 class="section-title">La différence <span>TextiCare</span></h2>
+        <p class="section-sub">6 engagements concrets pour une expérience sans stress et un résultat dont vous serez fier.</p>
+      </div>
+      <div class="avantages-grid">
+        <div class="avantage-item">
+          <div class="avantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Garantie satisfaction</h4>
+            <p>Pas satisfait ? Nous revenons gratuitement refaire l'intervention, sans discussion.</p>
+          </div>
+        </div>
+        <div class="avantage-item">
+          <div class="avantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Intervention sous 48h</h4>
+            <p>Réservation rapide en ligne ou par téléphone. Créneaux disponibles 6j/7.</p>
+          </div>
+        </div>
+        <div class="avantage-item">
+          <div class="avantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Paiement après résultat</h4>
+            <p>Vous payez uniquement une fois l'intervention terminée et validée par vos soins.</p>
+          </div>
+        </div>
+        <div class="avantage-item">
+          <div class="avantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Intervention à domicile</h4>
+            <p>Inutile de déplacer vos meubles. Nous venons chez vous avec tout le matériel.</p>
+          </div>
+        </div>
+        <div class="avantage-item">
+          <div class="avantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Produits 100% écologiques</h4>
+            <p>Formules biodégradables, sans solvants. Inoffensifs pour vos enfants, animaux et allergiques.</p>
+          </div>
+        </div>
+        <div class="avantage-item">
+          <div class="avantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="8" r="7"/>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Techniciens certifiés</h4>
+            <p>Chaque intervenant est formé, équipé et certifié. Assurance civile professionnelle incluse.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TARIFS
+  ═══════════════════════════════════════════ -->
+  <section class="section tarifs" id="tarifs">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          Tarifs clairs &amp; transparents
+        </div>
+        <h2 class="section-title">Choisissez votre <span>formule</span></h2>
+        <p class="section-sub">Prix fixes affichés, sans mauvaise surprise. Devis personnalisé gratuit pour les grandes surfaces ou demandes spécifiques.</p>
+      </div>
+      <div class="tarifs-grid">
+
+        <!-- Offre 1 -->
+        <div class="tarif-card">
+          <div class="tarif-header">
+            <div class="tarif-name">Essentiel</div>
+            <div class="tarif-desc">Canapé 2 places</div>
+            <div class="tarif-price">
+              <span class="currency">€</span>
+              <span class="amount">79</span>
+              <span class="per">/ prestation</span>
+            </div>
+          </div>
+          <div class="tarif-body">
+            <ul class="tarif-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Nettoyage vapeur en profondeur
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Produits écologiques inclus
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Déodorisation &amp; désinfection
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Séchage rapide (2-3h)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Garantie satisfaction
+              </li>
+              <li class="disabled">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Traitement anti-taches premium
+              </li>
+              <li class="disabled">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Protection textile longue durée
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-outline tarif-cta">Réserver cette offre</a>
+          </div>
+        </div>
+
+        <!-- Offre 2 (Popular) -->
+        <div class="tarif-card popular">
+          <div class="popular-badge">⭐ Offre la plus choisie</div>
+          <div class="tarif-header">
+            <div class="tarif-name">Confort</div>
+            <div class="tarif-desc">Canapé 3–4 places</div>
+            <div class="tarif-price">
+              <span class="currency">€</span>
+              <span class="amount">99</span>
+              <span class="per">/ prestation</span>
+            </div>
+          </div>
+          <div class="tarif-body">
+            <ul class="tarif-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Nettoyage vapeur en profondeur
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Produits écologiques inclus
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Déodorisation &amp; désinfection
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Séchage rapide (2-3h)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Garantie satisfaction
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Traitement anti-taches premium
+              </li>
+              <li class="disabled">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Protection textile longue durée
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary tarif-cta">Réserver cette offre</a>
+          </div>
+        </div>
+
+        <!-- Offre 3 -->
+        <div class="tarif-card">
+          <div class="tarif-header">
+            <div class="tarif-name">Premium</div>
+            <div class="tarif-desc">Canapé d'angle &amp; XL</div>
+            <div class="tarif-price">
+              <span class="currency">€</span>
+              <span class="amount">139</span>
+              <span class="per">/ prestation</span>
+            </div>
+          </div>
+          <div class="tarif-body">
+            <ul class="tarif-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Nettoyage vapeur en profondeur
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Produits écologiques inclus
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Déodorisation &amp; désinfection
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Séchage rapide (2-3h)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Garantie satisfaction
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Traitement anti-taches premium
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Protection textile longue durée
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-outline tarif-cta">Réserver cette offre</a>
+          </div>
+        </div>
+
+      </div>
+      <p style="text-align:center;margin-top:32px;font-size:15px;color:var(--gray-500);">
+        Vous avez une demande spécifique (matelas, chaises, sièges auto) ?
+        <a href="#contact" style="color:var(--teal);font-weight:600;">Demandez un devis personnalisé →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROCESS
+  ═══════════════════════════════════════════ -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge" style="background:rgba(0,181,173,.2);color:var(--teal);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Simple &amp; rapide
+        </div>
+        <h2 class="section-title">Comment ça <span>marche ?</span></h2>
+        <p class="section-sub" style="color:rgba(255,255,255,.65);">De votre appel à un canapé comme neuf, il ne faut que 4 étapes simples.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h4>Demande en ligne</h4>
+          <p>Remplissez le formulaire ou appelez-nous. Réponse garantie en moins de 2 heures.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h4>Devis &amp; rdv</h4>
+          <p>Devis clair et sans surprise. Vous choisissez le créneau qui vous convient.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h4>Intervention</h4>
+          <p>Nos techniciens arrivent à l'heure avec tout le matériel. Durée : 1 à 2 heures.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h4>Résultat &amp; paiement</h4>
+          <p>Vous validez le résultat, puis vous payez. Simple, transparent, honnête.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       AVIS CLIENTS
+  ═══════════════════════════════════════════ -->
+  <section class="section avis" id="avis">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          Ils nous font confiance
+        </div>
+        <h2 class="section-title">Ce que disent <span>nos clients</span></h2>
+      </div>
+      <div class="avis-header">
+        <div class="google-rating">
+          <div class="google-logo">
+            <span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span>
+          </div>
+          <div class="rating-big">4.9</div>
+          <div class="stars">★★★★★</div>
+          <div class="rating-count">214 avis vérifiés</div>
+        </div>
+      </div>
+      <div class="avis-grid">
+        <div class="avis-card">
+          <div class="avis-top">
+            <div class="avis-avatar" style="background:var(--teal);">S</div>
+            <div>
+              <div class="avis-name">Sophie M.</div>
+              <div class="stars" style="font-size:14px;">★★★★★</div>
+              <div class="avis-date">Il y a 3 jours</div>
+            </div>
+          </div>
+          <p>Mon canapé en velours gris était dans un état catastrophique (chat + enfants). Après l'intervention TextiCare, il est littéralement comme neuf. Je n'aurais jamais cru que c'était possible. Je recommande les yeux fermés !</p>
+        </div>
+        <div class="avis-card">
+          <div class="avis-top">
+            <div class="avis-avatar" style="background:var(--navy);">T</div>
+            <div>
+              <div class="avis-name">Thomas R.</div>
+              <div class="stars" style="font-size:14px;">★★★★★</div>
+              <div class="avis-date">Il y a 1 semaine</div>
+            </div>
+          </div>
+          <p>Très professionnel, ponctuel et efficace. Le technicien a pris le temps d'expliquer chaque étape. Mon canapé d'angle sentait très mauvais à cause des animaux, plus aucune odeur maintenant. Merci !</p>
+        </div>
+        <div class="avis-card">
+          <div class="avis-top">
+            <div class="avis-avatar" style="background:#8b5cf6;">A</div>
+            <div>
+              <div class="avis-name">Amira K.</div>
+              <div class="stars" style="font-size:14px;">★★★★★</div>
+              <div class="avis-date">Il y a 2 semaines</div>
+            </div>
+          </div>
+          <p>Service impeccable du début à la fin. J'avais des taches de vin rouge sur mon canapé beige que je pensais impossibles à enlever. Résultat bluffant. Le prix est juste et le paiement après résultat ça rassure vraiment.</p>
+        </div>
+        <div class="avis-card">
+          <div class="avis-top">
+            <div class="avis-avatar" style="background:#ef4444;">L</div>
+            <div>
+              <div class="avis-name">Lucas D.</div>
+              <div class="stars" style="font-size:14px;">★★★★★</div>
+              <div class="avis-date">Il y a 3 semaines</div>
+            </div>
+          </div>
+          <p>J'ai fait nettoyer mes matelas et mon canapé. Résultats vraiment impressionnants, surtout sur le matelas où il y avait des taches anciennes. L'équipe est sympa et le devis était clair dès le départ.</p>
+        </div>
+        <div class="avis-card">
+          <div class="avis-top">
+            <div class="avis-avatar" style="background:#f59e0b;">M</div>
+            <div>
+              <div class="avis-name">Marie-Claire F.</div>
+              <div class="stars" style="font-size:14px;">★★★★★</div>
+              <div class="avis-date">Il y a 1 mois</div>
+            </div>
+          </div>
+          <p>Je suis allergique aux acariens et depuis le nettoyage de mon matelas par TextiCare, mes nuits sont bien meilleures. Le technicien a utilisé des produits hypoallergéniques comme promis. Très satisfaite !</p>
+        </div>
+        <div class="avis-card">
+          <div class="avis-top">
+            <div class="avis-avatar" style="background:#10b981;">K</div>
+            <div>
+              <div class="avis-name">Kevin B.</div>
+              <div class="stars" style="font-size:14px;">★★★★★</div>
+              <div class="avis-date">Il y a 1 mois</div>
+            </div>
+          </div>
+          <p>Intervention rapide, résultat top. Mon canapé Ikea 3 places ressemble à un canapé neuf. Le séchage a pris à peine 2h. Rapport qualité/prix imbattable. Je ferai appel à eux chaque année.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════��══════════
+       GARANTIE BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="garantie">
+    <div class="container">
+      <h2>Satisfait ou on revient gratuitement</h2>
+      <p>Nous sommes tellement confiants dans notre travail que si vous n'êtes pas 100% satisfait, nous revenons refaire l'intervention à nos frais.</p>
+      <div class="garantie-items">
+        <div class="garantie-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>Garantie 30 jours</span>
+        </div>
+        <div class="garantie-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="7"/>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+          </svg>
+          <span>Techniciens certifiés</span>
+        </div>
+        <div class="garantie-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+            <line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+          <span>Paiement après résultat</span>
+        </div>
+        <div class="garantie-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+          <span>Produits écologiques</span>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-white">
+        Réserver mon nettoyage
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════════ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Questions fréquentes
+        </div>
+        <h2 class="section-title">Vos questions, <span>nos réponses</span></h2>
+        <p class="section-sub">Tout ce que vous devez savoir avant de réserver votre nettoyage.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">
+            Combien de temps dure l'intervention ?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">Une intervention standard dure entre 1h et 2h selon la taille et l'état du meuble. Un canapé 2 places prend environ 45 min, un canapé d'angle jusqu'à 2h30. Nous vous indiquons une durée précise lors de la confirmation du rendez-vous.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Mes textiles seront-ils mouillés après ?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">Oui légèrement humides, mais grâce à notre technique d'extraction à basse humidité, le temps de séchage est de seulement 2 à 3 heures. Vous pouvez utiliser votre canapé en soirée si l'intervention a lieu le matin. Nous déconseillons simplement de s'allonger dessus pendant le séchage.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Vos produits sont-ils dangereux pour mes animaux ou enfants ?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">Absolument pas. Nous utilisons exclusivement des produits certifiés écologiques, biodégradables et hypoallergéniques. Ils sont sans danger pour les nourrissons, enfants, animaux et personnes allergiques. Aucun résidu chimique ne reste sur vos textiles après séchage.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Est-ce que vous enlevez toutes les taches ?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">La grande majorité des taches (vin, café, urine, nourriture) disparaissent complètement. Pour les taches très anciennes ou les teintures, nous vous serons honnêtes dès le devis sur ce qui est réalisable. Dans tous les cas, le résultat est nettement amélioré. Notre garantie satisfaction s'applique toujours.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Comment se passe le paiement ?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">Nous acceptons les paiements en espèces, carte bancaire et virement. Le paiement se fait uniquement sur place, après l'intervention, une fois que vous avez validé le résultat. Aucun acompte ni prépaiement n'est demandé.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">
+            Intervenez-vous partout en France ?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </div>
+          <div class="faq-a">Nous intervenons actuellement en Île-de-France et dans les grandes agglomérations. Renseignez votre ville dans le formulaire et nous vous confirmons notre disponibilité dans les 2 heures. Notre zone de couverture s'étend régulièrement.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Devis gratuit
+          </div>
+          <h2>Prêt à retrouver un canapé <span>comme neuf ?</span></h2>
+          <p>Remplissez le formulaire ou appelez-nous directement. Nous vous rappelons sous 2 heures pour confirmer votre rendez-vous. Aucun engagement requis.</p>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 5.18a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Téléphone</div>
+              <a href="tel:+33600000000" class="contact-detail-value">06 00 00 00 00</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Email</div>
+              <a href="mailto:contact@texticare.fr" class="contact-detail-value">contact@texticare.fr</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Disponibilité</div>
+              <div class="contact-detail-value">Lun–Sam · 8h–20h</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3 style="font-size:22px;font-weight:800;color:var(--navy);margin-bottom:28px;">Votre devis gratuit</h3>
+          <form id="devisForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom *</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Marie" required />
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom *</label>
+                <input type="text" id="nom" name="nom" placeholder="Dupont" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tel">Téléphone *</label>
+                <input type="tel" id="tel" name="tel" placeholder="06 12 34 56 78" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="marie@email.fr" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="ville">Ville *</label>
+              <input type="text" id="ville" name="ville" placeholder="Paris, Lyon, Bordeaux..." required />
+            </div>
+            <div class="form-group">
+              <label for="canape">Type de prestation *</label>
+              <select id="canape" name="canape" required>
+                <option value="">Sélectionnez...</option>
+                <option value="canape-2">Canapé 2 places – à partir de 79€</option>
+                <option value="canape-3">Canapé 3-4 places – à partir de 99€</option>
+                <option value="canape-angle">Canapé d'angle / XL – à partir de 139€</option>
+                <option value="matelas">Matelas</option>
+                <option value="chaises">Chaises / Fauteuils</option>
+                <option value="auto">Sièges auto</option>
+                <option value="autre">Autre / Combinaison</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Précisions (optionnel)</label>
+              <textarea id="message" name="message" placeholder="Type de tissu, taches particulières, accès difficile..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              Envoyer ma demande de devis
+            </button>
+            <p class="form-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+              </svg>
+              Vos données sont confidentielles et ne sont jamais revendues.
+            </p>
+          </form>
+          <div id="formSuccess" style="display:none;text-align:center;padding:40px 20px;">
+            <div style="font-size:56px;margin-bottom:16px;">✅</div>
+            <h3 style="color:var(--navy);font-size:22px;font-weight:800;margin-bottom:8px;">Demande reçue !</h3>
+            <p style="color:var(--gray-500);">Nous vous recontactons dans les 2 heures pour confirmer votre rendez-vous.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="TextiCare" style="height:56px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);opacity:.9;" />
+          <p>Spécialiste du nettoyage de canapés et textiles à domicile. Des produits écologiques, un résultat professionnel, une satisfaction garantie.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.99a8.28 8.28 0 004.83 1.54V7.07a4.85 4.85 0 01-1.07-.38z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Nettoyage canapé</a></li>
+            <li><a href="#services">Nettoyage matelas</a></li>
+            <li><a href="#services">Nettoyage fauteuils</a></li>
+            <li><a href="#services">Nettoyage sièges auto</a></li>
+            <li><a href="#tarifs">Nos tarifs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="#process">Comment ça marche</a></li>
+            <li><a href="#avis">Avis clients</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <h4>Conseils &amp; bons plans</h4>
+          <p>Recevez nos conseils entretien et offres exclusives.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="votre@email.fr" aria-label="Email newsletter"/>
+            <button type="button">OK</button>
+          </div>
+          <div style="margin-top:24px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <span class="stars" style="font-size:15px;">★★★★★</span>
+              <span style="font-size:13px;">4.9/5 · 214 avis Google</span>
+            </div>
+            <div style="font-size:13px;">
+              <svg width="14" height="14" style="display:inline;vertical-align:-2px;margin-right:4px;" viewBox="0 0 24 24" fill="none" stroke="#00b5ad" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Satisfaction garantie ou retour gratuit
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 TextiCare – Tous droits réservés</span>
+        <div class="footer-bottom-links">
+          <a href="#">Mentions légales</a>
+          <a href="#">CGV</a>
+          <a href="#">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       CTA STICKY MOBILE
+  ═══════════════════════════════════════════ -->
+  <div id="stickyCta" style="
+    display:none; position:fixed; bottom:0; left:0; right:0; z-index:998;
+    background:#fff; padding:12px 20px; box-shadow:0 -4px 20px rgba(0,0,0,.12);
+    border-top:1px solid var(--gray-100);
+  ">
+    <div style="display:flex;gap:10px;">
+      <a href="tel:+33600000000" class="btn btn-outline" style="flex:1;justify-content:center;padding:14px 16px;font-size:15px;">
+        📞 Appeler
+      </a>
+      <a href="#contact" class="btn btn-primary" style="flex:2;justify-content:center;padding:14px 16px;font-size:15px;">
+        Devis gratuit
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       JS
+  ═══════════════════════════════════════════ -->
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Burger menu
+    const burger = document.getElementById('burger');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-mobile-open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => nav.classList.remove('nav-mobile-open'));
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const answer = item.querySelector('.faq-a');
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-a').classList.remove('open');
+        });
+        // Open clicked if wasn't open
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.classList.add('open');
+        }
+      });
+    });
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('devisForm');
+      const success = document.getElementById('formSuccess');
+      form.style.display = 'none';
+      success.style.display = 'block';
+      // Here you would send data to your backend / Formspree / etc.
+    }
+
+    // Sticky CTA mobile
+    const stickyCta = document.getElementById('stickyCta');
+    function toggleSticky() {
+      stickyCta.style.display = window.innerWidth < 768 ? 'block' : 'none';
+    }
+    toggleSticky();
+    window.addEventListener('resize', toggleSticky);
+
+    // Animate on scroll (IntersectionObserver)
+    const animItems = document.querySelectorAll('.service-card, .avantage-item, .tarif-card, .avis-card, .process-step');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = entry.target.style.transform.replace('translateY(30px)', 'translateY(0)');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    animItems.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
