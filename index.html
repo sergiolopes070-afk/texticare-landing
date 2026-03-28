@@ -690,6 +690,71 @@
       padding: 24px; border-bottom: 1px solid var(--gray-100);
       box-shadow: var(--shadow);
     }
+
+    /* ══════════════════════════════════════
+       MODAL DEVIS
+    ══════════════════════════════════════ */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(18,32,80,.6); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center; padding: 16px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: #fff; border-radius: 24px; width: 100%; max-width: 600px;
+      max-height: 90vh; overflow-y: auto;
+      box-shadow: 0 24px 80px rgba(0,0,0,.25);
+      animation: modalIn .3s ease;
+    }
+    @keyframes modalIn { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+    .modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px 28px 0;
+    }
+    .modal-header h3 { font-size: 20px; font-weight: 800; color: var(--navy); }
+    .modal-close {
+      width: 36px; height: 36px; border-radius: 50%; border: none;
+      background: var(--gray-100); cursor: pointer; display: flex;
+      align-items: center; justify-content: center; font-size: 18px;
+      transition: background .2s; flex-shrink: 0;
+    }
+    .modal-close:hover { background: var(--gray-300); }
+    .modal-body { padding: 20px 28px 28px; }
+
+    /* Photo upload */
+    .photo-upload {
+      border: 2px dashed var(--gray-300); border-radius: 12px;
+      padding: 20px; text-align: center; cursor: pointer;
+      transition: border-color .2s; position: relative;
+    }
+    .photo-upload:hover { border-color: var(--teal); }
+    .photo-upload input[type="file"] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%;
+    }
+    .photo-upload-icon { font-size: 28px; margin-bottom: 8px; }
+    .photo-upload-text { font-size: 14px; color: var(--gray-500); }
+    .photo-upload-text strong { color: var(--teal); }
+
+    /* À partir de */
+    .tarif-from {
+      font-size: 12px; font-weight: 600; color: var(--gray-500);
+      text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px;
+    }
+    .tarif-card.popular .tarif-from { color: var(--teal); }
+
+    /* Mobile améliorations */
+    @media (max-width: 768px) {
+      .nav-phone { display: none; }
+      .nav-phone-mobile {
+        display: flex !important; align-items: center; justify-content: center;
+        gap: 8px; background: var(--teal-light); padding: 10px 0;
+        font-weight: 700; color: var(--navy); font-size: 15px;
+        border-bottom: 1px solid var(--gray-100);
+      }
+      .modal-box { border-radius: 16px; }
+      .modal-body { padding: 16px 20px 24px; }
+    }
+    .nav-phone-mobile { display: none; }
   </style>
 </head>
 
@@ -734,7 +799,7 @@
             </svg>
             06 20 79 97 47
           </a>
-          <a href="#contact" class="btn btn-primary" style="padding:12px 24px;font-size:14px;">Devis gratuit</a>
+          <button type="button" onclick="openModal()" class="btn btn-primary" style="padding:12px 24px;font-size:14px;">Devis gratuit</button>
         </div>
 
         <div class="nav-burger" id="burger" aria-label="Menu">
@@ -743,6 +808,15 @@
       </div>
     </div>
   </nav>
+
+  <!-- Mobile phone banner -->
+  <div class="nav-phone-mobile">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="color:var(--teal)">
+      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 5.18a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+    </svg>
+    <a href="tel:+33620799747" style="color:var(--navy);font-weight:700;">06 20 79 97 47</a>
+    <span style="color:var(--gray-500);font-size:13px;">— Lun–Dim 8h–20h</span>
+  </div>
 
   <!-- ═══════════════════════════════════════════
        HERO
@@ -761,12 +835,12 @@
             TextiCare, votre entreprise spécialisée dans le nettoyage de canapé tissu à domicile et le nettoyage de matelas. Intervention rapide, produits 100% écologiques — résultat visible immédiatement ou on revient gratuitement.
           </p>
           <div class="hero-ctas">
-            <a href="#contact" class="btn btn-primary" style="font-size:17px;padding:18px 36px;">
+            <button type="button" onclick="openModal()" class="btn btn-primary" style="font-size:17px;padding:18px 36px;">
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
               </svg>
               Devis gratuit en 2 min
-            </a>
+            </button>
             <a href="tel:+33620799747" class="btn btn-outline">
               <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 5.18a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
@@ -911,7 +985,7 @@
         <p class="section-sub">Notre entreprise de nettoyage canapé tissu intervient à domicile sur tous vos textiles : canapé, matelas, fauteuils et sièges auto — avec le matériel professionnel adapté.</p>
       </div>
       <div class="services-grid">
-        <div class="service-card">
+        <a class="service-card" href="#tarifs" onclick="event.preventDefault();switchTabById('canape');document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;display:block;text-decoration:none;color:inherit;">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
               <rect x="8" y="28" width="48" height="20" rx="6"/>
@@ -924,8 +998,8 @@
           </div>
           <h3>Canapé & sofa</h3>
           <p>Tissu, cuir, microfibre, velours. Nettoyage vapeur en profondeur pour un résultat impeccable.</p>
-        </div>
-        <div class="service-card">
+        </a>
+        <a class="service-card" href="#tarifs" onclick="event.preventDefault();switchTabById('matelas');document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;display:block;text-decoration:none;color:inherit;">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
               <rect x="6" y="24" width="52" height="28" rx="8"/>
@@ -936,8 +1010,8 @@
           </div>
           <h3>Matelas</h3>
           <p>Élimination des acariens, taches et odeurs. Séchage rapide pour reprendre votre routine.</p>
-        </div>
-        <div class="service-card">
+        </a>
+        <a class="service-card" href="#tarifs" onclick="event.preventDefault();switchTabById('tapis');document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;display:block;text-decoration:none;color:inherit;">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
               <rect x="12" y="16" width="18" height="30" rx="4"/>
@@ -952,8 +1026,8 @@
           </div>
           <h3>Chaises & fauteuils</h3>
           <p>Salle à manger, bureau ou salon — nous traitons toutes vos assises en tissu.</p>
-        </div>
-        <div class="service-card">
+        </a>
+        <a class="service-card" href="#contact" onclick="event.preventDefault();openModal()" style="cursor:pointer;display:block;text-decoration:none;color:inherit;">
           <div class="service-icon">
             <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
               <rect x="8" y="12" width="48" height="36" rx="6"/>
@@ -964,7 +1038,7 @@
           </div>
           <h3>Sièges auto</h3>
           <p>Intérieur de véhicule complet. Cuir, tissus, tapis. Résultat showroom garanti.</p>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -1097,6 +1171,7 @@
           <div class="tarif-header">
             <div class="tarif-name">Essentiel</div>
             <div class="tarif-desc">Canapé 2 places</div>
+            <div class="tarif-from">À partir de</div>
             <div class="tarif-price">
               <span class="currency">€</span>
               <span class="amount">79</span>
@@ -1144,6 +1219,7 @@
           <div class="tarif-header">
             <div class="tarif-name">Confort</div>
             <div class="tarif-desc">Canapé 3–4 places</div>
+            <div class="tarif-from">À partir de</div>
             <div class="tarif-price">
               <span class="currency">€</span>
               <span class="amount">89</span>
@@ -1190,6 +1266,7 @@
           <div class="tarif-header">
             <div class="tarif-name">Premium</div>
             <div class="tarif-desc">Canapé d'angle &amp; XL</div>
+            <div class="tarif-from">À partir de</div>
             <div class="tarif-price">
               <span class="currency">€</span>
               <span class="amount">119</span>
@@ -1241,6 +1318,7 @@
             <div class="tarif-header">
               <div class="tarif-name">Simple</div>
               <div class="tarif-desc">Matelas 1 personne (90×190)</div>
+              <div class="tarif-from">À partir de</div>
               <div class="tarif-price">
                 <span class="currency">€</span>
                 <span class="amount">69</span>
@@ -1265,6 +1343,7 @@
             <div class="tarif-header">
               <div class="tarif-name">Double</div>
               <div class="tarif-desc">Matelas 2 personnes (140×190)</div>
+              <div class="tarif-from">À partir de</div>
               <div class="tarif-price">
                 <span class="currency">€</span>
                 <span class="amount">79</span>
@@ -1288,6 +1367,7 @@
             <div class="tarif-header">
               <div class="tarif-name">King Size</div>
               <div class="tarif-desc">Matelas 160×200 et +</div>
+              <div class="tarif-from">À partir de</div>
               <div class="tarif-price">
                 <span class="currency">€</span>
                 <span class="amount">109</span>
@@ -1317,6 +1397,7 @@
             <div class="tarif-header">
               <div class="tarif-name">Petit tapis</div>
               <div class="tarif-desc">Jusqu'à 4 m²</div>
+              <div class="tarif-from">À partir de</div>
               <div class="tarif-price">
                 <span class="currency">€</span>
                 <span class="amount">49</span>
@@ -1340,6 +1421,7 @@
             <div class="tarif-header">
               <div class="tarif-name">Tapis moyen</div>
               <div class="tarif-desc">De 4 à 9 m²</div>
+              <div class="tarif-from">À partir de</div>
               <div class="tarif-price">
                 <span class="currency">€</span>
                 <span class="amount">79</span>
@@ -1362,6 +1444,7 @@
             <div class="tarif-header">
               <div class="tarif-name">Grand tapis</div>
               <div class="tarif-desc">Plus de 9 m²</div>
+              <div class="tarif-from">À partir de</div>
               <div class="tarif-price">
                 <span class="currency">€</span>
                 <span class="amount">119</span>
@@ -1683,7 +1766,7 @@
             </div>
             <div>
               <div class="contact-detail-label">Disponibilité</div>
-              <div class="contact-detail-value">Lun–Sam · 8h–20h</div>
+              <div class="contact-detail-value">Lun–Dim · 8h–20h</div>
             </div>
           </div>
         </div>
@@ -1692,7 +1775,8 @@
           <h3 style="font-size:22px;font-weight:800;color:var(--navy);margin-bottom:28px;">Votre devis gratuit</h3>
           <form id="devisForm"
             action="https://formsubmit.co/texticare@gmail.com"
-            method="POST">
+            method="POST"
+            enctype="multipart/form-data">
 
             <!-- Formsubmit config -->
             <input type="hidden" name="_subject" value="Nouvelle demande de devis – TextiCare" />
@@ -1729,10 +1813,15 @@
               <label for="canape">Type de prestation *</label>
               <select id="canape" name="canape" required>
                 <option value="">Sélectionnez...</option>
-                <option value="canape-2">Canapé 2 places – à partir de 79€</option>
-                <option value="canape-3">Canapé 3-4 places – à partir de 99€</option>
-                <option value="canape-angle">Canapé d'angle / XL – à partir de 139€</option>
-                <option value="matelas">Matelas</option>
+                <option value="canape-2">Canapé 2 places (Essentiel)</option>
+                <option value="canape-3">Canapé 3-4 places (Confort)</option>
+                <option value="canape-angle">Canapé d'angle / XL (Premium)</option>
+                <option value="matelas-simple">Matelas Simple</option>
+                <option value="matelas-double">Matelas Double</option>
+                <option value="matelas-king">Matelas King Size</option>
+                <option value="tapis-petit">Petit tapis</option>
+                <option value="tapis-moyen">Tapis moyen</option>
+                <option value="tapis-grand">Grand tapis</option>
                 <option value="chaises">Chaises / Fauteuils</option>
                 <option value="auto">Sièges auto</option>
                 <option value="autre">Autre / Combinaison</option>
@@ -1746,33 +1835,11 @@
                   <input type="radio" name="disponibilite" value="urgent" onchange="handleRdv(this)" />
                   <span class="radio-emoji">🚨</span>
                   <div>
-                    <div class="radio-label">Urgent — intervention sous 48h</div>
+                    <div class="radio-label">Urgent — être recontacté immédiatement</div>
                     <div class="radio-sub">Nous vous rappelons dans l'heure</div>
                   </div>
                   <span class="radio-dot" style="margin-left:auto;"></span>
                 </label>
-                <label class="rdv-radio" id="rdv-date">
-                  <input type="radio" name="disponibilite" value="date" onchange="handleRdv(this)" />
-                  <span class="radio-emoji">📅</span>
-                  <div>
-                    <div class="radio-label">Je choisis une date</div>
-                    <div class="radio-sub">Sélectionnez votre créneau préféré</div>
-                  </div>
-                  <span class="radio-dot" style="margin-left:auto;"></span>
-                </label>
-                <div class="date-picker-wrap" id="datePicker">
-                  <div class="date-time-row">
-                    <div class="form-group">
-                      <label for="date_souhaitee">Date souhaitée</label>
-                      <input type="date" id="date_souhaitee" name="date_souhaitee" />
-                    </div>
-                    <div class="form-group">
-                      <label for="heure_souhaitee">Heure (optionnel)</label>
-                      <input type="time" id="heure_souhaitee" name="heure_souhaitee" />
-                    </div>
-                  </div>
-                  <p class="date-optional">💡 L'heure est indicative, nous confirmons le créneau exact par téléphone.</p>
-                </div>
                 <label class="rdv-radio checked" id="rdv-contact">
                   <input type="radio" name="disponibilite" value="recontacter" onchange="handleRdv(this)" checked />
                   <span class="radio-emoji">📞</span>
@@ -1788,6 +1855,15 @@
             <div class="form-group">
               <label for="message">Précisions (optionnel)</label>
               <textarea id="message" name="message" placeholder="Type de tissu, taches particulières, accès difficile..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Photo (optionnel)</label>
+              <div class="photo-upload">
+                <input type="file" name="photo" accept="image/*" />
+                <div class="photo-upload-icon">📷</div>
+                <div class="photo-upload-text"><strong>Ajouter une photo</strong> — glissez ou cliquez</div>
+                <div class="photo-upload-text" style="font-size:12px;margin-top:4px;">JPG, PNG, HEIC · Max 10 Mo</div>
+              </div>
             </div>
             <button type="submit" class="btn btn-primary form-submit">
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -1916,9 +1992,127 @@
       <a href="tel:+33620799747" class="btn btn-outline" style="flex:1;justify-content:center;padding:14px 16px;font-size:15px;">
         📞 Appeler
       </a>
-      <a href="#contact" class="btn btn-primary" style="flex:2;justify-content:center;padding:14px 16px;font-size:15px;">
+      <button type="button" onclick="openModal()" class="btn btn-primary" style="flex:2;justify-content:center;padding:14px 16px;font-size:15px;">
         Devis gratuit
-      </a>
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MODAL DEVIS
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="devisModal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Votre devis gratuit</h3>
+        <button class="modal-close" onclick="closeModal()" aria-label="Fermer">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="devisFormModal"
+          action="https://formsubmit.co/texticare@gmail.com"
+          method="POST"
+          enctype="multipart/form-data">
+
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis – TextiCare" />
+          <input type="hidden" name="_next" value="https://texticare-preview.vercel.app/merci.html" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="m_prenom">Prénom *</label>
+              <input type="text" id="m_prenom" name="prenom" placeholder="Marie" required />
+            </div>
+            <div class="form-group">
+              <label for="m_nom">Nom *</label>
+              <input type="text" id="m_nom" name="nom" placeholder="Dupont" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="m_tel">Téléphone *</label>
+              <input type="tel" id="m_tel" name="tel" placeholder="06 12 34 56 78" required />
+            </div>
+            <div class="form-group">
+              <label for="m_email">Email</label>
+              <input type="email" id="m_email" name="email" placeholder="marie@email.fr" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="m_ville">Ville *</label>
+            <input type="text" id="m_ville" name="ville" placeholder="Paris, Lyon, Bordeaux..." required />
+          </div>
+          <div class="form-group">
+            <label for="m_canape">Type de prestation *</label>
+            <select id="m_canape" name="canape" required>
+              <option value="">Sélectionnez...</option>
+              <option value="canape-2">Canapé 2 places (Essentiel)</option>
+              <option value="canape-3">Canapé 3-4 places (Confort)</option>
+              <option value="canape-angle">Canapé d'angle / XL (Premium)</option>
+              <option value="matelas-simple">Matelas Simple</option>
+              <option value="matelas-double">Matelas Double</option>
+              <option value="matelas-king">Matelas King Size</option>
+              <option value="tapis-petit">Petit tapis</option>
+              <option value="tapis-moyen">Tapis moyen</option>
+              <option value="tapis-grand">Grand tapis</option>
+              <option value="chaises">Chaises / Fauteuils</option>
+              <option value="auto">Sièges auto</option>
+              <option value="autre">Autre / Combinaison</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Quand souhaitez-vous l'intervention ?</label>
+            <div class="rdv-options">
+              <label class="rdv-radio urgent-option">
+                <input type="radio" name="disponibilite" value="urgent" />
+                <span class="radio-emoji">🚨</span>
+                <div>
+                  <div class="radio-label">Urgent — être recontacté immédiatement</div>
+                  <div class="radio-sub">Nous vous rappelons dans l'heure</div>
+                </div>
+                <span class="radio-dot" style="margin-left:auto;"></span>
+              </label>
+              <label class="rdv-radio checked">
+                <input type="radio" name="disponibilite" value="recontacter" checked />
+                <span class="radio-emoji">📞</span>
+                <div>
+                  <div class="radio-label">Je préfère être recontacté(e)</div>
+                  <div class="radio-sub">Nous vous appelons pour fixer ensemble</div>
+                </div>
+                <span class="radio-dot" style="margin-left:auto;"></span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="m_message">Précisions (optionnel)</label>
+            <textarea id="m_message" name="message" placeholder="Type de tissu, taches particulières..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Photo (optionnel)</label>
+            <div class="photo-upload">
+              <input type="file" name="photo" accept="image/*" />
+              <div class="photo-upload-icon">📷</div>
+              <div class="photo-upload-text"><strong>Ajouter une photo</strong> — glissez ou cliquez</div>
+              <div class="photo-upload-text" style="font-size:12px;margin-top:4px;">JPG, PNG, HEIC · Max 10 Mo</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" style="width:100%;justify-content:center;">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+            Envoyer ma demande de devis
+          </button>
+          <p class="form-note" style="margin-top:12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+            Vos données sont confidentielles et ne sont jamais revendues.
+          </p>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -1926,6 +2120,23 @@
        JS
   ═══════════════════════════════════════════ -->
   <script>
+    // Modal
+    function openModal() {
+      document.getElementById('devisModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('devisModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // Tab switching with helper
+    function switchTabById(tab) {
+      const btn = document.querySelector(`.tarif-tab[onclick*="'${tab}'"]`);
+      if (btn) switchTab(tab, btn);
+    }
+
     // Nav scroll
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
@@ -2004,12 +2215,11 @@
       document.getElementById('panel-' + tab).classList.add('active');
     }
 
-    // Date picker RDV
+    // RDV radio
     function handleRdv(radio) {
-      document.querySelectorAll('.rdv-radio').forEach(r => r.classList.remove('checked'));
+      const form = radio.closest('form');
+      form.querySelectorAll('.rdv-radio').forEach(r => r.classList.remove('checked'));
       radio.closest('.rdv-radio').classList.add('checked');
-      const picker = document.getElementById('datePicker');
-      picker.classList.toggle('show', radio.value === 'date');
     }
 
     // Smooth scroll for anchor links
