@@ -139,6 +139,7 @@
     .nav-phone {
       display: flex; align-items: center; gap: 8px;
       font-weight: 700; color: var(--navy); font-size: 15px;
+      white-space: nowrap;
     }
     .nav-phone svg { color: var(--teal); }
     .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
@@ -210,18 +211,21 @@
       position: relative; animation: fadeInRight .8s ease .2s both;
     }
     .hero-card {
-      background: #fff; border-radius: 24px; padding: 40px;
-      box-shadow: var(--shadow-lg); text-align: center;
-      position: relative; z-index: 1;
+      position: relative; z-index: 1; width: 100%;
     }
-    .hero-card-icon {
-      width: 100px; height: 100px; background: var(--teal-light);
-      border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; margin: 0 auto 24px;
+    .hero-photo {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+      border-radius: 24px; box-shadow: var(--shadow-lg); display: block;
     }
-    .hero-card-icon svg { width: 56px; height: 56px; color: var(--teal); }
-    .hero-card h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-    .hero-card p { font-size: 15px; color: var(--gray-500); line-height: 1.6; }
+    .hero-photo-badge {
+      position: absolute; bottom: 20px; left: 20px; right: 20px;
+      background: rgba(255,255,255,.95); border-radius: 16px;
+      padding: 14px 18px; box-shadow: var(--shadow);
+      display: flex; align-items: center; gap: 14px;
+    }
+    .hero-photo-badge .stars { font-size: 16px; }
+    .hero-photo-badge-text { font-size: 13px; color: var(--gray-700); line-height: 1.4; }
+    .hero-photo-badge-text strong { color: var(--navy); font-size: 15px; display: block; }
     .hero-rating {
       margin-top: 24px; padding-top: 24px;
       border-top: 1px solid var(--gray-100);
@@ -877,23 +881,16 @@
 
         <div class="hero-visual">
           <div class="hero-card">
-            <div class="hero-card-icon">
-              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
-                <rect x="8" y="28" width="48" height="22" rx="6"/>
-                <rect x="16" y="28" width="32" height="12" rx="5"/>
-                <rect x="4" y="34" width="10" height="14" rx="5"/>
-                <rect x="50" y="34" width="10" height="14" rx="5"/>
-                <line x1="18" y1="50" x2="18" y2="58" stroke-linecap="round"/>
-                <line x1="46" y1="50" x2="46" y2="58" stroke-linecap="round"/>
-                <path d="M32 10 L33.2 14 L37 15.2 L33.2 16.5 L32 20.5 L30.8 16.5 L27 15.2 L30.8 14 Z" fill="#00b5ad" stroke="none"/>
-              </svg>
-            </div>
-            <h3>Nettoyage vapeur professionnel</h3>
-            <p>Technologie extracteur + vapeur. Élimine 99,9% des allergènes, acariens et bactéries.</p>
-            <div class="hero-rating">
-              <div>
-                <div class="stars">★★★★★</div>
-                <div class="hero-rating-text"><strong>4.9</strong> / 5 · <span>214 avis Google</span></div>
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
+              alt="Technicien TextiCare en train de nettoyer un canapé à domicile"
+              class="hero-photo"
+            />
+            <div class="hero-photo-badge">
+              <div class="stars">★★★★★</div>
+              <div class="hero-photo-badge-text">
+                <strong>4.9 / 5</strong>
+                214 avis Google vérifiés
               </div>
             </div>
           </div>
