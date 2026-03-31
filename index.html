@@ -437,11 +437,22 @@
     .google-logo .e { color: #ea4335; }
     .rating-big { font-size: 48px; font-weight: 900; color: var(--navy); line-height: 1; }
     .rating-count { font-size: 14px; color: var(--gray-500); }
-    .avis-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .avis-grid { overflow: hidden; position: relative; }
+    .avis-track {
+      display: flex; gap: 24px;
+      animation: avis-scroll 35s linear infinite;
+      width: max-content;
+    }
+    .avis-grid:hover .avis-track { animation-play-state: paused; }
+    @keyframes avis-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
     .avis-card {
       background: #fff; border-radius: var(--radius);
       padding: 28px; border: 1px solid var(--gray-100);
       transition: box-shadow .3s;
+      flex-shrink: 0; width: 360px;
     }
     .avis-card:hover { box-shadow: var(--shadow); }
     .avis-top { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
@@ -672,7 +683,7 @@
       .tarif-card.popular { transform: scale(1); }
       .process-steps { grid-template-columns: 1fr 1fr; }
       .process-steps::before { display: none; }
-      .avis-grid { grid-template-columns: 1fr; }
+      .avis-card { width: 300px; }
       .contact-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .contact-form { padding: 28px; }
@@ -1522,71 +1533,141 @@
         </div>
       </div>
       <div class="avis-grid">
-        <div class="avis-card">
-          <div class="avis-top">
-            <div class="avis-avatar" style="background:var(--teal);">S</div>
-            <div>
-              <div class="avis-name">Sophie M.</div>
-              <div class="stars" style="font-size:14px;">★★★★★</div>
-              <div class="avis-date">Il y a 3 jours</div>
+        <div class="avis-track">
+          <!-- Série 1 -->
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:var(--teal);">S</div>
+              <div>
+                <div class="avis-name">Sophie M.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 3 jours</div>
+              </div>
             </div>
+            <p>Mon canapé en velours gris était dans un état catastrophique (chat + enfants). Après l'intervention TextiCare, il est littéralement comme neuf. Je n'aurais jamais cru que c'était possible. Je recommande les yeux fermés !</p>
           </div>
-          <p>Mon canapé en velours gris était dans un état catastrophique (chat + enfants). Après l'intervention TextiCare, il est littéralement comme neuf. Je n'aurais jamais cru que c'était possible. Je recommande les yeux fermés !</p>
-        </div>
-        <div class="avis-card">
-          <div class="avis-top">
-            <div class="avis-avatar" style="background:var(--navy);">T</div>
-            <div>
-              <div class="avis-name">Thomas R.</div>
-              <div class="stars" style="font-size:14px;">★★★★★</div>
-              <div class="avis-date">Il y a 1 semaine</div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:var(--navy);">T</div>
+              <div>
+                <div class="avis-name">Thomas R.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 1 semaine</div>
+              </div>
             </div>
+            <p>Très professionnel, ponctuel et efficace. Le technicien a pris le temps d'expliquer chaque étape. Mon canapé d'angle sentait très mauvais à cause des animaux, plus aucune odeur maintenant. Merci !</p>
           </div>
-          <p>Très professionnel, ponctuel et efficace. Le technicien a pris le temps d'expliquer chaque étape. Mon canapé d'angle sentait très mauvais à cause des animaux, plus aucune odeur maintenant. Merci !</p>
-        </div>
-        <div class="avis-card">
-          <div class="avis-top">
-            <div class="avis-avatar" style="background:#8b5cf6;">A</div>
-            <div>
-              <div class="avis-name">Amira K.</div>
-              <div class="stars" style="font-size:14px;">★★★★★</div>
-              <div class="avis-date">Il y a 2 semaines</div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:#8b5cf6;">A</div>
+              <div>
+                <div class="avis-name">Amira K.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 2 semaines</div>
+              </div>
             </div>
+            <p>Service impeccable du début à la fin. J'avais des taches de vin rouge sur mon canapé beige que je pensais impossibles à enlever. Résultat bluffant. Le prix est juste et le paiement après résultat ça rassure vraiment.</p>
           </div>
-          <p>Service impeccable du début à la fin. J'avais des taches de vin rouge sur mon canapé beige que je pensais impossibles à enlever. Résultat bluffant. Le prix est juste et le paiement après résultat ça rassure vraiment.</p>
-        </div>
-        <div class="avis-card">
-          <div class="avis-top">
-            <div class="avis-avatar" style="background:#ef4444;">L</div>
-            <div>
-              <div class="avis-name">Lucas D.</div>
-              <div class="stars" style="font-size:14px;">★★★★★</div>
-              <div class="avis-date">Il y a 3 semaines</div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:#ef4444;">L</div>
+              <div>
+                <div class="avis-name">Lucas D.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 3 semaines</div>
+              </div>
             </div>
+            <p>J'ai fait nettoyer mes matelas et mon canapé. Résultats vraiment impressionnants, surtout sur le matelas où il y avait des taches anciennes. L'équipe est sympa et le devis était clair dès le départ.</p>
           </div>
-          <p>J'ai fait nettoyer mes matelas et mon canapé. Résultats vraiment impressionnants, surtout sur le matelas où il y avait des taches anciennes. L'équipe est sympa et le devis était clair dès le départ.</p>
-        </div>
-        <div class="avis-card">
-          <div class="avis-top">
-            <div class="avis-avatar" style="background:#f59e0b;">M</div>
-            <div>
-              <div class="avis-name">Marie-Claire F.</div>
-              <div class="stars" style="font-size:14px;">★★★★★</div>
-              <div class="avis-date">Il y a 1 mois</div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:#f59e0b;">M</div>
+              <div>
+                <div class="avis-name">Marie-Claire F.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 1 mois</div>
+              </div>
             </div>
+            <p>Je suis allergique aux acariens et depuis le nettoyage de mon matelas par TextiCare, mes nuits sont bien meilleures. Le technicien a utilisé des produits hypoallergéniques comme promis. Très satisfaite !</p>
           </div>
-          <p>Je suis allergique aux acariens et depuis le nettoyage de mon matelas par TextiCare, mes nuits sont bien meilleures. Le technicien a utilisé des produits hypoallergéniques comme promis. Très satisfaite !</p>
-        </div>
-        <div class="avis-card">
-          <div class="avis-top">
-            <div class="avis-avatar" style="background:#10b981;">K</div>
-            <div>
-              <div class="avis-name">Kevin B.</div>
-              <div class="stars" style="font-size:14px;">★★★★★</div>
-              <div class="avis-date">Il y a 1 mois</div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:#10b981;">K</div>
+              <div>
+                <div class="avis-name">Kevin B.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 1 mois</div>
+              </div>
             </div>
+            <p>Intervention rapide, résultat top. Mon canapé Ikea 3 places ressemble à un canapé neuf. Le séchage a pris à peine 2h. Rapport qualité/prix imbattable. Je ferai appel à eux chaque année.</p>
           </div>
-          <p>Intervention rapide, résultat top. Mon canapé Ikea 3 places ressemble à un canapé neuf. Le séchage a pris à peine 2h. Rapport qualité/prix imbattable. Je ferai appel à eux chaque année.</p>
+          <!-- Série 2 (duplicate pour boucle infinie) -->
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:var(--teal);">S</div>
+              <div>
+                <div class="avis-name">Sophie M.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 3 jours</div>
+              </div>
+            </div>
+            <p>Mon canapé en velours gris était dans un état catastrophique (chat + enfants). Après l'intervention TextiCare, il est littéralement comme neuf. Je n'aurais jamais cru que c'était possible. Je recommande les yeux fermés !</p>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:var(--navy);">T</div>
+              <div>
+                <div class="avis-name">Thomas R.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 1 semaine</div>
+              </div>
+            </div>
+            <p>Très professionnel, ponctuel et efficace. Le technicien a pris le temps d'expliquer chaque étape. Mon canapé d'angle sentait très mauvais à cause des animaux, plus aucune odeur maintenant. Merci !</p>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:#8b5cf6;">A</div>
+              <div>
+                <div class="avis-name">Amira K.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 2 semaines</div>
+              </div>
+            </div>
+            <p>Service impeccable du début à la fin. J'avais des taches de vin rouge sur mon canapé beige que je pensais impossibles à enlever. Résultat bluffant. Le prix est juste et le paiement après résultat ça rassure vraiment.</p>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:#ef4444;">L</div>
+              <div>
+                <div class="avis-name">Lucas D.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 3 semaines</div>
+              </div>
+            </div>
+            <p>J'ai fait nettoyer mes matelas et mon canapé. Résultats vraiment impressionnants, surtout sur le matelas où il y avait des taches anciennes. L'équipe est sympa et le devis était clair dès le départ.</p>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:#f59e0b;">M</div>
+              <div>
+                <div class="avis-name">Marie-Claire F.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 1 mois</div>
+              </div>
+            </div>
+            <p>Je suis allergique aux acariens et depuis le nettoyage de mon matelas par TextiCare, mes nuits sont bien meilleures. Le technicien a utilisé des produits hypoallergéniques comme promis. Très satisfaite !</p>
+          </div>
+          <div class="avis-card">
+            <div class="avis-top">
+              <div class="avis-avatar" style="background:#10b981;">K</div>
+              <div>
+                <div class="avis-name">Kevin B.</div>
+                <div class="stars" style="font-size:14px;">★★★★★</div>
+                <div class="avis-date">Il y a 1 mois</div>
+              </div>
+            </div>
+            <p>Intervention rapide, résultat top. Mon canapé Ikea 3 places ressemble à un canapé neuf. Le séchage a pris à peine 2h. Rapport qualité/prix imbattable. Je ferai appel à eux chaque année.</p>
+          </div>
         </div>
       </div>
     </div>
