@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M9PTWZRL');</script>
+  <!-- End Google Tag Manager -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17906754062"></script>
   <script>
@@ -9,527 +16,264 @@
     gtag('js', new Date());
     gtag('config', 'AW-17906754062');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conditions Générales de Vente – TextiCare</title>
-  <meta name="description" content="Conditions Générales de Vente de TextiCare – Prestations de nettoyage de canapés, tapis, matelas et textiles à domicile." />
-  <meta name="robots" content="noindex, follow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: #1e293b; background: #f8fafc; }
-
-    :root {
-      --navy: #1b3070;
-      --navy-dark: #122050;
-      --teal: #00b5ad;
-      --teal-light: #e0f7f6;
-      --gray-100: #f1f5f9;
-      --gray-300: #cbd5e1;
-      --gray-500: #64748b;
-      --gray-700: #334155;
-      --radius: 14px;
-      --shadow: 0 4px 24px rgba(27,48,112,.10);
-    }
-
-    /* NAV */
-    .nav {
-      position: sticky; top: 0; z-index: 99;
-      background: rgba(255,255,255,.97); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--gray-100);
-      box-shadow: var(--shadow);
-    }
-    .nav-inner {
-      max-width: 900px; margin: 0 auto; padding: 0 24px;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 68px;
-    }
-    .nav-logo { display: flex; align-items: center; text-decoration: none; }
-    .nav-logo svg { height: 46px; width: auto; }
-    .back-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 14px; font-weight: 600; color: var(--teal);
-      text-decoration: none; transition: gap .2s;
-    }
-    .back-link:hover { gap: 12px; }
-    .back-link svg { width: 16px; height: 16px; }
-
-    /* HERO */
-    .cgv-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #0f2057 100%);
-      color: #fff; padding: 64px 24px 56px; text-align: center;
-    }
-    .cgv-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 4vw, 42px); font-weight: 800;
-      margin-bottom: 12px;
-    }
-    .cgv-hero p { font-size: 16px; opacity: .75; margin-bottom: 8px; }
-    .cgv-hero .version {
-      display: inline-block; background: rgba(0,181,173,.25); color: #00b5ad;
-      font-size: 13px; font-weight: 600; padding: 6px 16px;
-      border-radius: 50px; margin-top: 12px;
-    }
-
-    /* LAYOUT */
-    .cgv-wrap {
-      max-width: 900px; margin: 0 auto; padding: 48px 24px 80px;
-      display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start;
-    }
-
-    /* SOMMAIRE */
-    .sommaire {
-      position: sticky; top: 84px;
-      background: #fff; border-radius: var(--radius);
-      border: 1px solid var(--gray-100);
-      padding: 24px; box-shadow: var(--shadow);
-    }
-    .sommaire h2 {
-      font-size: 13px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .8px; color: var(--gray-500); margin-bottom: 16px;
-    }
-    .sommaire ol { list-style: none; display: flex; flex-direction: column; gap: 2px; }
-    .sommaire li a {
-      display: block; font-size: 13px; color: var(--gray-700);
-      text-decoration: none; padding: 6px 10px; border-radius: 8px;
-      transition: all .2s; line-height: 1.4;
-    }
-    .sommaire li a:hover { background: var(--teal-light); color: var(--teal); }
-    .sommaire li a.active { background: var(--teal-light); color: var(--teal); font-weight: 600; }
-
-    /* CONTENT */
-    .cgv-content { background: #fff; border-radius: var(--radius); padding: 48px; box-shadow: var(--shadow); }
-
-    .cgv-article {
-      padding-bottom: 40px; margin-bottom: 40px;
-      border-bottom: 1px solid var(--gray-100);
-      scroll-margin-top: 90px;
-    }
-    .cgv-article:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
-
-    .article-num {
-      display: inline-block; background: var(--teal-light); color: var(--teal);
-      font-size: 12px; font-weight: 700; padding: 4px 12px;
-      border-radius: 50px; margin-bottom: 12px; letter-spacing: .4px;
-    }
-    .cgv-article h2 {
-      font-size: 20px; font-weight: 700; color: var(--navy);
-      margin-bottom: 16px; line-height: 1.3;
-    }
-    .cgv-article p {
-      font-size: 15px; color: var(--gray-700); line-height: 1.8;
-      margin-bottom: 12px;
-    }
-    .cgv-article p:last-child { margin-bottom: 0; }
-    .cgv-article ul, .cgv-article ol {
-      margin: 12px 0 12px 0; padding-left: 0;
-      list-style: none; display: flex; flex-direction: column; gap: 8px;
-    }
-    .cgv-article ul li, .cgv-article ol li {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 15px; color: var(--gray-700); line-height: 1.7;
-    }
-    .cgv-article ul li::before {
-      content: ''; width: 6px; height: 6px; border-radius: 50%;
-      background: var(--teal); flex-shrink: 0; margin-top: 9px;
-    }
-    .cgv-article ol { counter-reset: item; }
-    .cgv-article ol li { counter-increment: item; }
-    .cgv-article ol li::before {
-      content: counter(item) ".";
-      font-weight: 700; color: var(--teal); flex-shrink: 0; min-width: 20px;
-    }
-
-    .warning-box {
-      background: #fff7ed; border: 1px solid #fed7aa;
-      border-radius: 12px; padding: 16px 20px; margin: 16px 0;
-      display: flex; gap: 12px; align-items: flex-start;
-    }
-    .warning-box svg { color: #f59e0b; flex-shrink: 0; margin-top: 2px; }
-    .warning-box p { font-size: 14px; color: #92400e; margin: 0; line-height: 1.6; }
-
-    .info-box {
-      background: var(--teal-light); border: 1px solid #99e6e4;
-      border-radius: 12px; padding: 16px 20px; margin: 16px 0;
-      display: flex; gap: 12px; align-items: flex-start;
-    }
-    .info-box svg { color: var(--teal); flex-shrink: 0; margin-top: 2px; }
-    .info-box p { font-size: 14px; color: #0d7a76; margin: 0; line-height: 1.6; }
-
-    /* VALIDATION BANNER */
-    .validation-banner {
-      background: linear-gradient(135deg, var(--navy) 0%, #0f2057 100%);
-      color: #fff; border-radius: var(--radius); padding: 32px;
-      margin-top: 40px; text-align: center;
-    }
-    .validation-banner h3 {
-      font-size: 18px; font-weight: 700; margin-bottom: 12px;
-    }
-    .validation-banner p {
-      font-size: 15px; opacity: .8; line-height: 1.7; margin-bottom: 24px;
-    }
-    .validation-banner a {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--teal); color: #fff; padding: 14px 28px;
-      border-radius: 50px; font-weight: 700; font-size: 15px;
-      text-decoration: none; transition: background .2s;
-    }
-    .validation-banner a:hover { background: #009990; }
-
-    /* FOOTER */
-    .page-footer {
-      background: var(--navy-dark, #122050); color: rgba(255,255,255,.6);
-      text-align: center; padding: 24px;
-      font-size: 13px;
-    }
-    .page-footer a { color: var(--teal); text-decoration: none; }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .cgv-wrap { grid-template-columns: 1fr; }
-      .sommaire { position: static; }
-      .cgv-content { padding: 28px 20px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGV — Texticare (Kinouclean SAS)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f9f9f9; color: #1a1a1a; }
+  .cgv-wrap { max-width: 860px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .cgv-header { border-bottom: 2px solid #e0e0e0; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+  .cgv-header h1 { font-size: 22px; font-weight: 600; margin-bottom: 6px; color: #1a1a1a; }
+  .cgv-header p { font-size: 14px; color: #666; }
+  .cgv-date { font-size: 12px; color: #999; margin-top: 6px; }
+  .cgv-toc { background: #f2f4f8; border-radius: 10px; padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; }
+  .cgv-toc h2 { font-size: 12px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+  .cgv-toc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px; }
+  .cgv-toc a { font-size: 13px; color: #555; text-decoration: none; padding: 3px 0; display: block; }
+  .cgv-toc a:hover { color: #1a1a1a; }
+  .cgv-article { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee; }
+  .cgv-article:last-of-type { border-bottom: none; }
+  .cgv-article h2 { font-size: 15px; font-weight: 600; margin-bottom: 10px; padding-left: 12px; border-left: 3px solid #3b82f6; color: #1a1a1a; }
+  .cgv-article p { font-size: 14px; line-height: 1.75; color: #444; margin-bottom: 8px; }
+  .cgv-article ul { padding-left: 1.4rem; margin-bottom: 8px; }
+  .cgv-article li { font-size: 14px; line-height: 1.75; color: #444; margin-bottom: 4px; }
+  .cgv-alert { background: #fffbeb; border-left: 3px solid #f59e0b; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 12px 0; font-size: 13px; color: #92400e; }
+  .cgv-info { background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 12px 0; font-size: 13px; color: #1e40af; }
+  .cgv-validation { background: #f2f4f8; border-radius: 10px; padding: 1.5rem; margin-top: 2rem; text-align: center; }
+  .cgv-validation h2 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+  .cgv-validation p { font-size: 13px; color: #555; }
+  a { color: #3b82f6; }
+  @media (max-width: 600px) {
+    .cgv-toc-grid { grid-template-columns: 1fr; }
+    .cgv-wrap { padding: 1.5rem 1rem; }
+  }
+</style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9PTWZRL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="cgv-wrap">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <svg viewBox="0 0 220 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="28" y="4" width="60" height="18" rx="5" fill="none" stroke="#1b3070" stroke-width="2.2"/>
-          <rect x="22" y="10" width="10" height="12" rx="4" fill="none" stroke="#1b3070" stroke-width="2.2"/>
-          <rect x="84" y="10" width="10" height="12" rx="4" fill="none" stroke="#1b3070" stroke-width="2.2"/>
-          <line x1="58" y1="4" x2="58" y2="12" stroke="#1b3070" stroke-width="1.8"/>
-          <line x1="34" y1="22" x2="34" y2="28" stroke="#1b3070" stroke-width="2.2" stroke-linecap="round"/>
-          <line x1="82" y1="22" x2="82" y2="28" stroke="#1b3070" stroke-width="2.2" stroke-linecap="round"/>
-          <path d="M58 -2 L59.2 2.8 L64 4 L59.2 5.2 L58 10 L56.8 5.2 L52 4 L56.8 2.8 Z" fill="#1b3070"/>
-          <text y="66" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="38">
-            <tspan fill="#1b3070">Texti</tspan><tspan fill="#00b5ad">Care</tspan>
-          </text>
-        </svg>
-      </a>
-      <a href="index.html" class="back-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <line x1="19" y1="12" x2="5" y2="12"/>
-          <polyline points="12 19 5 12 12 5"/>
-        </svg>
-        Retour au site
-      </a>
+  <div class="cgv-header">
+    <h1>Conditions générales de vente</h1>
+    <p>Prestations de nettoyage de canapés, tapis, matelas et textiles à domicile<br>Marque <strong>Texticare</strong> — exploitée par <strong>Kinouclean SAS</strong></p>
+    <p class="cgv-date">Version en vigueur au 28 mars 2026</p>
+  </div>
+
+  <div class="cgv-toc">
+    <h2>Sommaire</h2>
+    <div class="cgv-toc-grid">
+      <a href="#art1">1. Objet</a>
+      <a href="#art2">2. Acceptation des CGV</a>
+      <a href="#art3">3. Nature des prestations</a>
+      <a href="#art4">4. Déclaration de valeur du bien</a>
+      <a href="#art5">5. Risques liés au nettoyage</a>
+      <a href="#art6">6. État du bien et diagnostic</a>
+      <a href="#art7">7. Taches et résultats</a>
+      <a href="#art8">8. Responsabilité limitée</a>
+      <a href="#art9">9. Exclusions de responsabilité</a>
+      <a href="#art10">10. Séchage après intervention</a>
+      <a href="#art11">11. Obligations du client</a>
+      <a href="#art12">12. Accès et intervention</a>
+      <a href="#art13">13. Sous-traitance</a>
+      <a href="#art14">14. Preuve et photos</a>
+      <a href="#art15">15. Réclamations</a>
+      <a href="#art16">16. Litiges et expertise</a>
+      <a href="#art17">17. Annulation et retard</a>
+      <a href="#art18">18. Paiement</a>
+      <a href="#art19">19. Médiation de la consommation</a>
+      <a href="#art20">20. Force majeure</a>
+      <a href="#art21">21. Données personnelles</a>
+      <a href="#art22">22. Droit applicable</a>
+      <a href="#art23">23. Acceptation des risques</a>
+      <a href="#art24">24. Bonne foi</a>
+      <a href="#art25">25. Validité des clauses</a>
     </div>
-  </nav>
-
-  <!-- HERO -->
-  <div class="cgv-hero">
-    <h1>Conditions Générales de Vente</h1>
-    <p>Prestations de nettoyage de canapés, tapis, matelas et textiles à domicile</p>
-    <span class="version">Version en vigueur au 28 mars 2026</span>
   </div>
 
-  <!-- MAIN -->
-  <div class="cgv-wrap">
-
-    <!-- SOMMAIRE -->
-    <aside class="sommaire">
-      <h2>Sommaire</h2>
-      <ol>
-        <li><a href="#art1">1. Objet</a></li>
-        <li><a href="#art2">2. Acceptation des CGV</a></li>
-        <li><a href="#art3">3. Nature des prestations</a></li>
-        <li><a href="#art4">4. Déclaration de valeur</a></li>
-        <li><a href="#art5">5. Risques liés au nettoyage</a></li>
-        <li><a href="#art6">6. État du bien et diagnostic</a></li>
-        <li><a href="#art7">7. Taches et résultats</a></li>
-        <li><a href="#art8">8. Responsabilité limitée</a></li>
-        <li><a href="#art9">9. Exclusions</a></li>
-        <li><a href="#art10">10. Séchage</a></li>
-        <li><a href="#art11">11. Obligations du client</a></li>
-        <li><a href="#art12">12. Accès et intervention</a></li>
-        <li><a href="#art13">13. Sous-traitance</a></li>
-        <li><a href="#art14">14. Preuve et photos</a></li>
-        <li><a href="#art15">15. Réclamations</a></li>
-        <li><a href="#art16">16. Litiges et expertise</a></li>
-        <li><a href="#art17">17. Annulation et retard</a></li>
-        <li><a href="#art18">18. Paiement</a></li>
-        <li><a href="#art19">19. Médiation</a></li>
-        <li><a href="#art20">20. Force majeure</a></li>
-        <li><a href="#art21">21. Données personnelles</a></li>
-        <li><a href="#art22">22. Droit applicable</a></li>
-        <li><a href="#art23">23. Acceptation des risques</a></li>
-        <li><a href="#art24">24. Bonne foi</a></li>
-        <li><a href="#art25">25. Validité des clauses</a></li>
-      </ol>
-    </aside>
-
-    <!-- CONTENT -->
-    <main class="cgv-content">
-
-      <div class="cgv-article" id="art1">
-        <span class="article-num">Article 1</span>
-        <h2>Objet</h2>
-        <p>Les présentes Conditions Générales de Vente (CGV) définissent les droits et obligations du prestataire et du client dans le cadre des prestations de nettoyage de textiles d'ameublement (canapés, fauteuils, tapis, matelas, chaises, etc.).</p>
-      </div>
-
-      <div class="cgv-article" id="art2">
-        <span class="article-num">Article 2</span>
-        <h2>Acceptation des CGV</h2>
-        <p>Toute commande implique l'acceptation pleine, entière et sans réserve des présentes CGV. Le client reconnaît en avoir pris connaissance préalablement à l'intervention.</p>
-        <p>L'acceptation est formalisée par :</p>
-        <ul>
-          <li>Signature manuscrite ou électronique du bon de commande, ou</li>
-          <li>Case à cocher explicite sur le formulaire de réservation en ligne, ou</li>
-          <li>Confirmation écrite par email ou SMS</li>
-        </ul>
-        <div class="warning-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <p>Aucune intervention ne peut débuter sans preuve d'acceptation des présentes CGV.</p>
-        </div>
-      </div>
-
-      <div class="cgv-article" id="art3">
-        <span class="article-num">Article 3</span>
-        <h2>Nature des prestations</h2>
-        <p>Les prestations consistent en un nettoyage standard ou approfondi selon les techniques professionnelles disponibles. Le prestataire est tenu à une <strong>obligation de moyens et non de résultat</strong>. En conséquence, il ne garantit pas :</p>
-        <ul>
-          <li>L'élimination totale de toutes les taches</li>
-          <li>La disparition complète des odeurs</li>
-          <li>La restauration à l'état neuf</li>
-          <li>Un résultat uniforme sur l'ensemble du textile</li>
-        </ul>
-      </div>
-
-      <div class="cgv-article" id="art4">
-        <span class="article-num">Article 4</span>
-        <h2>Déclaration de valeur du bien</h2>
-        <p>Avant toute intervention, le client est tenu de déclarer la valeur estimée du bien concerné. Cette déclaration est formalisée par écrit (bon d'intervention, email ou SMS).</p>
-        <div class="warning-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <p>En l'absence de déclaration de valeur, la responsabilité du prestataire est limitée à un plafond forfaitaire de <strong>300 €</strong> par bien traité.</p>
-        </div>
-        <p>La déclaration de valeur conditionne directement l'étendue de la responsabilité du prestataire. En cas de bien de valeur supérieure à 300 €, le client est invité à le signaler avant toute intervention.</p>
-      </div>
-
-      <div class="cgv-article" id="art5">
-        <span class="article-num">Article 5</span>
-        <h2>Risques liés au nettoyage (acceptés par le client)</h2>
-        <p>Le client reconnaît que toute intervention de nettoyage comporte des risques inhérents, notamment :</p>
-        <ul>
-          <li>Décoloration ou éclaircissement du tissu</li>
-          <li>Apparition ou accentuation d'auréoles</li>
-          <li>Remontée de taches anciennes (effet de capillarité)</li>
-          <li>Altération des fibres fragilisées</li>
-          <li>Réapparition de taches après séchage</li>
-          <li>Variations de texture (durcissement, feutrage, rétrécissement léger)</li>
-          <li>Réactions imprévisibles liées aux traitements antérieurs</li>
-        </ul>
-        <div class="info-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <p>Le client accepte expressément ces risques préalablement à toute intervention.</p>
-        </div>
-      </div>
-
-      <div class="cgv-article" id="art6">
-        <span class="article-num">Article 6</span>
-        <h2>État du bien et diagnostic préalable</h2>
-        <p>Avant toute intervention, un diagnostic visuel peut être réalisé, des photos peuvent être prises, et un test sur zone non visible peut être effectué. Le prestataire se réserve le droit de refuser une intervention si le textile est jugé trop fragile, ou d'adapter la méthode de nettoyage si nécessaire.</p>
-      </div>
-
-      <div class="cgv-article" id="art7">
-        <span class="article-num">Article 7</span>
-        <h2>Taches et résultats</h2>
-        <p>Le prestataire ne peut être tenu responsable de l'échec de traitement des taches, notamment :</p>
-        <ul>
-          <li>Taches anciennes ou incrustées</li>
-          <li>Taches ayant déjà subi des traitements</li>
-          <li>Taches d'origine chimique ou acide</li>
-          <li>Décolorations irréversibles</li>
-          <li>Taches biologiques (urine, sang, etc.)</li>
-        </ul>
-        <p>Certaines taches peuvent être fixées définitivement par le temps ou des traitements antérieurs.</p>
-      </div>
-
-      <div class="cgv-article" id="art8">
-        <span class="article-num">Article 8</span>
-        <h2>Responsabilité limitée</h2>
-        <p>La responsabilité du prestataire ne peut être engagée qu'en cas de faute prouvée. En tout état de cause :</p>
-        <ul>
-          <li>La responsabilité est limitée au montant le plus bas entre la valeur déclarée du bien, le plafond de 300 € en l'absence de déclaration, ou le montant de la prestation</li>
-          <li>Aucune indemnisation pour préjudice indirect (perte d'usage, perte financière, etc.) ne pourra être réclamée</li>
-          <li>Le prestataire dispose d'une assurance Responsabilité Civile Professionnelle. Les coordonnées de l'assureur sont disponibles sur simple demande.</li>
-        </ul>
-      </div>
-
-      <div class="cgv-article" id="art9">
-        <span class="article-num">Article 9</span>
-        <h2>Exclusions de responsabilité</h2>
-        <p>Le prestataire ne pourra être tenu responsable en cas de :</p>
-        <ul>
-          <li>Usure normale du mobilier</li>
-          <li>Défaut de fabrication</li>
-          <li>Tissu non conforme ou non adapté au nettoyage</li>
-          <li>Matériaux sensibles (soie, lin fragile, velours délicat, etc.)</li>
-          <li>Coutures fragiles ou défectueuses</li>
-          <li>Mousse interne dégradée</li>
-          <li>Infestation (acariens, moisissures, parasites)</li>
-          <li>Mauvaise ventilation après intervention</li>
-          <li>Mauvaise utilisation après nettoyage</li>
-        </ul>
-      </div>
-
-      <div class="cgv-article" id="art10">
-        <span class="article-num">Article 10</span>
-        <h2>Séchage et conditions après intervention</h2>
-        <p>Le client est informé que le temps de séchage varie de <strong>4 à 24h ou plus</strong>. Une mauvaise aération peut entraîner : odeurs, moisissures, auréoles. Le prestataire ne pourra être tenu responsable en cas de non-respect des consignes de séchage.</p>
-      </div>
-
-      <div class="cgv-article" id="art11">
-        <span class="article-num">Article 11</span>
-        <h2>Obligations du client</h2>
-        <p>Le client s'engage à :</p>
-        <ul>
-          <li>Fournir un accès sécurisé au lieu d'intervention</li>
-          <li>Libérer l'espace de travail</li>
-          <li>Signaler tout défaut, fragilité ou traitement antérieur</li>
-          <li>Déclarer la valeur du bien avant l'intervention (article 4)</li>
-          <li>Assurer une alimentation électrique fonctionnelle</li>
-          <li>Garantir l'absence de danger (animaux agressifs, environnement dangereux)</li>
-        </ul>
-      </div>
-
-      <div class="cgv-article" id="art12">
-        <span class="article-num">Article 12</span>
-        <h2>Accès et intervention à domicile</h2>
-        <p>En cas d'impossibilité d'intervention due au client, le déplacement sera facturé et un report sera possible selon disponibilité. Le prestataire se réserve le droit d'interrompre la prestation en cas de danger ou de conditions inadaptées.</p>
-      </div>
-
-      <div class="cgv-article" id="art13">
-        <span class="article-num">Article 13</span>
-        <h2>Sous-traitance</h2>
-        <p>Le prestataire peut faire appel à des sous-traitants qualifiés. Il reste responsable de la bonne exécution dans les limites définies par les présentes CGV.</p>
-      </div>
-
-      <div class="cgv-article" id="art14">
-        <span class="article-num">Article 14</span>
-        <h2>Preuve et photos</h2>
-        <p>Le prestataire procède systématiquement à des prises de vue <strong>avant et après</strong> chaque intervention. Ces photos constituent une preuve contractuelle et pourront être utilisées en cas de litige.</p>
-      </div>
-
-      <div class="cgv-article" id="art15">
-        <span class="article-num">Article 15</span>
-        <h2>Réclamations</h2>
-        <p>Toute réclamation doit être :</p>
-        <ul>
-          <li>Formulée dans un délai impératif de <strong>48 heures</strong> suivant la prestation</li>
-          <li>Adressée par écrit (email, SMS ou courrier recommandé)</li>
-          <li>Accompagnée de photos et preuves du préjudice allégué</li>
-        </ul>
-        <div class="warning-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <p>Passé ce délai de 48 heures, aucune réclamation ne sera recevable, quelle qu'en soit la nature.</p>
-        </div>
-      </div>
-
-      <div class="cgv-article" id="art16">
-        <span class="article-num">Article 16</span>
-        <h2>Litiges et expertise</h2>
-        <p>En cas de contestation, une expertise peut être demandée par l'une ou l'autre des parties. Si aucune faute n'est reconnue à l'encontre du prestataire, les frais d'expertise seront à la charge du client.</p>
-      </div>
-
-      <div class="cgv-article" id="art17">
-        <span class="article-num">Article 17</span>
-        <h2>Annulation et retard</h2>
-        <p>Toute annulation tardive (moins de 24h avant l'intervention) pourra faire l'objet d'une facturation de frais de déplacement. Un retard du client peut entraîner une réduction du temps d'intervention disponible.</p>
-      </div>
-
-      <div class="cgv-article" id="art18">
-        <span class="article-num">Article 18</span>
-        <h2>Paiement</h2>
-        <p>Le paiement est exigible immédiatement après la prestation sauf accord contraire préalable écrit. Le prestataire délivre systématiquement une facture ou un reçu pour toute prestation effectuée.</p>
-      </div>
-
-      <div class="cgv-article" id="art19">
-        <span class="article-num">Article 19</span>
-        <h2>Médiation de la consommation</h2>
-        <p>Conformément aux articles L.616-1 et R.616-1 du Code de la consommation, en cas de litige non résolu, le client peut recourir gratuitement au médiateur de la consommation :</p>
-        <div class="info-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <p><strong>Médiateur : CM2C</strong><br/>Adresse : 14 rue Saint Jean — 75017 Paris<br/>Site : www.cm2c.net<br/>Le client peut saisir le médiateur dans un délai d'un an à compter de sa réclamation écrite auprès du prestataire.</p>
-        </div>
-      </div>
-
-      <div class="cgv-article" id="art20">
-        <span class="article-num">Article 20</span>
-        <h2>Force majeure</h2>
-        <p>Le prestataire ne pourra être tenu responsable en cas d'événement indépendant de sa volonté (catastrophe naturelle, pandémie, grève, etc.).</p>
-      </div>
-
-      <div class="cgv-article" id="art21">
-        <span class="article-num">Article 21</span>
-        <h2>Données personnelles</h2>
-        <p>Les données collectées sont utilisées uniquement dans le cadre de la relation commerciale, conformément au RGPD. Elles ne sont pas transmises à des tiers sans consentement explicite.</p>
-      </div>
-
-      <div class="cgv-article" id="art22">
-        <span class="article-num">Article 22</span>
-        <h2>Droit applicable</h2>
-        <p>Les présentes CGV sont soumises au droit français. Tout litige relève des juridictions compétentes du ressort du siège social du prestataire.</p>
-      </div>
-
-      <div class="cgv-article" id="art23">
-        <span class="article-num">Article 23</span>
-        <h2>Clause spécifique d'acceptation des risques</h2>
-        <p>Le client reconnaît expressément : avoir été informé des risques liés au nettoyage, accepter ces risques sans réserve, et renoncer à toute réclamation en cas de réaction normale du textile.</p>
-      </div>
-
-      <div class="cgv-article" id="art24">
-        <span class="article-num">Article 24</span>
-        <h2>Clause de bonne foi</h2>
-        <p>Les parties s'engagent à collaborer de bonne foi pour résoudre tout litige à l'amiable avant tout recours judiciaire.</p>
-      </div>
-
-      <div class="cgv-article" id="art25">
-        <span class="article-num">Article 25</span>
-        <h2>Validité des clauses</h2>
-        <p>Si une clause est jugée invalide par une juridiction compétente, les autres clauses restent pleinement applicables.</p>
-      </div>
-
-      <!-- VALIDATION BANNER -->
-      <div class="validation-banner">
-        <h3>Validation client</h3>
-        <p>En passant commande, le client reconnaît avoir lu, compris et accepté l'intégralité des présentes CGV avant toute intervention de Texticare.</p>
-        <a href="index.html">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          Réserver une intervention
-        </a>
-      </div>
-
-    </main>
+  <div class="cgv-article" id="art1">
+    <h2>Article 1 — Objet</h2>
+    <p>Les présentes Conditions Générales de Vente (CGV) définissent les droits et obligations du prestataire et du client dans le cadre des prestations de nettoyage de textiles d'ameublement (canapés, fauteuils, tapis, matelas, chaises, etc.).</p>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="page-footer">
-    <p>© 2026 TextiCare — <a href="index.html">Retour au site</a> · <a href="mailto:texticare@gmail.com">texticare@gmail.com</a></p>
-  </footer>
+  <div class="cgv-article" id="art2">
+    <h2>Article 2 — Acceptation des CGV</h2>
+    <p>Toute commande implique l'acceptation pleine, entière et sans réserve des présentes CGV. Le client reconnaît en avoir pris connaissance préalablement à l'intervention.</p>
+    <p>L'acceptation est formalisée par :</p>
+    <ul>
+      <li>Signature manuscrite ou électronique du bon de commande, ou</li>
+      <li>Case à cocher explicite sur le formulaire de réservation en ligne, ou</li>
+      <li>Confirmation écrite par email ou SMS</li>
+    </ul>
+    <div class="cgv-alert">Aucune intervention ne peut débuter sans preuve d'acceptation des présentes CGV. Le prestataire au sens des présentes CGV désigne <strong>Kinouclean SAS</strong>, société immatriculée au RCS de Paris, exploitant la marque commerciale <strong>Texticare</strong>.</div>
+  </div>
 
-  <script>
-    // Highlight active sommaire item on scroll
-    const articles = document.querySelectorAll('.cgv-article');
-    const links = document.querySelectorAll('.sommaire a');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          links.forEach(l => l.classList.remove('active'));
-          const active = document.querySelector(`.sommaire a[href="#${entry.target.id}"]`);
-          if (active) active.classList.add('active');
-        }
-      });
-    }, { rootMargin: '-20% 0px -70% 0px' });
-    articles.forEach(a => observer.observe(a));
-  </script>
+  <div class="cgv-article" id="art3">
+    <h2>Article 3 — Nature des prestations</h2>
+    <p>Les prestations consistent en un nettoyage standard ou approfondi selon les techniques professionnelles disponibles. Le prestataire est tenu à une <strong>obligation de moyens et non de résultat</strong>. En conséquence, il ne garantit pas :</p>
+    <ul>
+      <li>L'élimination totale de toutes les taches</li>
+      <li>La disparition complète des odeurs</li>
+      <li>La restauration à l'état neuf</li>
+      <li>Un résultat uniforme sur l'ensemble du textile</li>
+    </ul>
+  </div>
+
+  <div class="cgv-article" id="art4">
+    <h2>Article 4 — Déclaration de valeur du bien</h2>
+    <p>Avant toute intervention, le client est tenu de déclarer la valeur estimée du bien concerné. Cette déclaration est formalisée par écrit (bon d'intervention, email ou SMS).</p>
+    <p>En l'absence de déclaration de valeur, la responsabilité du prestataire est limitée à un plafond forfaitaire de <strong>300 €</strong> par bien traité.</p>
+    <div class="cgv-info">La déclaration de valeur conditionne directement l'étendue de la responsabilité du prestataire. En cas de bien de valeur supérieure à 300 €, le client est invité à le signaler avant toute intervention.</div>
+  </div>
+
+  <div class="cgv-article" id="art5">
+    <h2>Article 5 — Risques liés au nettoyage (acceptés par le client)</h2>
+    <p>Le client reconnaît que toute intervention de nettoyage comporte des risques inhérents, notamment :</p>
+    <ul>
+      <li>Décoloration ou éclaircissement du tissu</li>
+      <li>Apparition ou accentuation d'auréoles</li>
+      <li>Remontée de taches anciennes (effet de capillarité)</li>
+      <li>Altération des fibres fragilisées</li>
+      <li>Réapparition de taches après séchage</li>
+      <li>Variations de texture (durcissement, feutrage, rétrécissement léger)</li>
+      <li>Réactions imprévisibles liées aux traitements antérieurs</li>
+    </ul>
+    <p>Le client accepte expressément ces risques.</p>
+  </div>
+
+  <div class="cgv-article" id="art6">
+    <h2>Article 6 — État du bien et diagnostic préalable</h2>
+    <p>Avant toute intervention, un diagnostic visuel peut être réalisé, des photos peuvent être prises, et un test sur zone non visible peut être effectué. Le prestataire se réserve le droit de refuser une intervention si le textile est jugé trop fragile, ou d'adapter la méthode de nettoyage si nécessaire.</p>
+  </div>
+
+  <div class="cgv-article" id="art7">
+    <h2>Article 7 — Taches et résultats</h2>
+    <p>Le prestataire ne peut être tenu responsable de l'échec de traitement des taches, notamment : taches anciennes ou incrustées, taches ayant déjà subi des traitements, taches d'origine chimique ou acide, décolorations irréversibles, taches biologiques (urine, sang, etc.). Certaines taches peuvent être fixées définitivement par le temps ou des traitements antérieurs.</p>
+  </div>
+
+  <div class="cgv-article" id="art8">
+    <h2>Article 8 — Responsabilité limitée</h2>
+    <p>La responsabilité du prestataire ne peut être engagée qu'en cas de faute prouvée. En tout état de cause :</p>
+    <ul>
+      <li>La responsabilité est limitée au montant le plus bas entre la valeur déclarée du bien, le plafond de 300 € en l'absence de déclaration, ou le montant de la prestation</li>
+      <li>Aucune indemnisation pour préjudice indirect (perte d'usage, perte financière, etc.) ne pourra être réclamée</li>
+    </ul>
+    <div class="cgv-info">Le prestataire dispose d'une assurance Responsabilité Civile Professionnelle. Les coordonnées de l'assureur sont disponibles sur simple demande.</div>
+  </div>
+
+  <div class="cgv-article" id="art9">
+    <h2>Article 9 — Exclusions de responsabilité</h2>
+    <p>Le prestataire ne pourra être tenu responsable en cas de : usure normale du mobilier, défaut de fabrication, tissu non conforme ou non adapté au nettoyage, matériaux sensibles (soie, lin fragile, velours délicat, etc.), coutures fragiles ou défectueuses, mousse interne dégradée, infestation (acariens, moisissures, parasites), mauvaise ventilation après intervention, mauvaise utilisation après nettoyage.</p>
+  </div>
+
+  <div class="cgv-article" id="art10">
+    <h2>Article 10 — Séchage et conditions après intervention</h2>
+    <p>Le client est informé que le temps de séchage varie de 4 à 24h ou plus. Une mauvaise aération peut entraîner : odeurs, moisissures, auréoles. Le prestataire ne pourra être tenu responsable en cas de non-respect des consignes de séchage.</p>
+  </div>
+
+  <div class="cgv-article" id="art11">
+    <h2>Article 11 — Obligations du client</h2>
+    <p>Le client s'engage à :</p>
+    <ul>
+      <li>Fournir un accès sécurisé au lieu d'intervention</li>
+      <li>Libérer l'espace de travail</li>
+      <li>Signaler tout défaut, fragilité ou traitement antérieur</li>
+      <li>Déclarer la valeur du bien avant l'intervention (article 4)</li>
+      <li>Assurer une alimentation électrique fonctionnelle</li>
+      <li>Garantir l'absence de danger (animaux agressifs, environnement dangereux)</li>
+    </ul>
+  </div>
+
+  <div class="cgv-article" id="art12">
+    <h2>Article 12 — Accès et intervention à domicile</h2>
+    <p>En cas d'impossibilité d'intervention due au client, le déplacement sera facturé et un report sera possible selon disponibilité. Le prestataire se réserve le droit d'interrompre la prestation en cas de danger ou de conditions inadaptées.</p>
+  </div>
+
+  <div class="cgv-article" id="art13">
+    <h2>Article 13 — Sous-traitance</h2>
+    <p>Kinouclean SAS peut faire appel à des sous-traitants qualifiés pour l'exécution des prestations réalisées sous la marque Texticare. Elle reste responsable de la bonne exécution dans les limites définies par les présentes CGV. Le client contracte exclusivement avec Kinouclean SAS et non avec le sous-traitant.</p>
+  </div>
+
+  <div class="cgv-article" id="art14">
+    <h2>Article 14 — Preuve et photos</h2>
+    <p>Le prestataire procède systématiquement à des prises de vue avant et après chaque intervention. Ces photos constituent une preuve contractuelle et pourront être utilisées en cas de litige.</p>
+  </div>
+
+  <div class="cgv-article" id="art15">
+    <h2>Article 15 — Réclamations</h2>
+    <p>Toute réclamation doit être :</p>
+    <ul>
+      <li>Formulée dans un délai impératif de <strong>48 heures</strong> suivant la prestation</li>
+      <li>Adressée par écrit (email, SMS ou courrier recommandé)</li>
+      <li>Accompagnée de photos et preuves du préjudice allégué</li>
+    </ul>
+    <div class="cgv-alert">Passé ce délai de 48 heures, aucune réclamation ne sera recevable, quelle qu'en soit la nature. Ce délai est porté à la connaissance du client préalablement à l'intervention et formalisé par son acceptation des présentes CGV.</div>
+  </div>
+
+  <div class="cgv-article" id="art16">
+    <h2>Article 16 — Litiges et expertise</h2>
+    <p>En cas de contestation, une expertise peut être demandée par l'une ou l'autre des parties. Si aucune faute n'est reconnue à l'encontre du prestataire, les frais d'expertise seront à la charge du client.</p>
+  </div>
+
+  <div class="cgv-article" id="art17">
+    <h2>Article 17 — Annulation et retard</h2>
+    <p>Toute annulation tardive (moins de 24h avant l'intervention) pourra faire l'objet d'une facturation de frais de déplacement. Un retard du client peut entraîner une réduction du temps d'intervention disponible.</p>
+  </div>
+
+  <div class="cgv-article" id="art18">
+    <h2>Article 18 — Paiement</h2>
+    <p>Le paiement est exigible immédiatement après la prestation sauf accord contraire préalable écrit. Le prestataire délivre systématiquement une facture ou un reçu pour toute prestation effectuée.</p>
+  </div>
+
+  <div class="cgv-article" id="art19">
+    <h2>Article 19 — Médiation de la consommation (obligation légale)</h2>
+    <p>Conformément aux articles L.616-1 et R.616-1 du Code de la consommation, en cas de litige non résolu, le client peut recourir gratuitement au médiateur de la consommation :</p>
+    <ul>
+      <li>Médiateur : CM2C</li>
+      <li>Adresse : 14 rue Saint Jean — 75017 Paris</li>
+      <li>Site : <a href="https://www.cm2c.net" target="_blank">www.cm2c.net</a></li>
+    </ul>
+    <p>Le client peut saisir le médiateur dans un délai d'un an à compter de sa réclamation écrite auprès du prestataire.</p>
+  </div>
+
+  <div class="cgv-article" id="art20">
+    <h2>Article 20 — Force majeure</h2>
+    <p>Le prestataire ne pourra être tenu responsable en cas d'événement indépendant de sa volonté (catastrophe naturelle, pandémie, grève, etc.).</p>
+  </div>
+
+  <div class="cgv-article" id="art21">
+    <h2>Article 21 — Données personnelles</h2>
+    <p>Les données collectées sont utilisées uniquement dans le cadre de la relation commerciale, conformément au RGPD. Elles ne sont pas transmises à des tiers sans consentement explicite.</p>
+  </div>
+
+  <div class="cgv-article" id="art22">
+    <h2>Article 22 — Droit applicable</h2>
+    <p>Les présentes CGV sont soumises au droit français. Tout litige relève des juridictions compétentes du ressort du siège social du prestataire.</p>
+  </div>
+
+  <div class="cgv-article" id="art23">
+    <h2>Article 23 — Clause spécifique d'acceptation des risques</h2>
+    <p>Le client reconnaît expressément : avoir été informé des risques liés au nettoyage, accepter ces risques sans réserve, et renoncer à toute réclamation en cas de réaction normale du textile.</p>
+  </div>
+
+  <div class="cgv-article" id="art24">
+    <h2>Article 24 — Clause de bonne foi</h2>
+    <p>Les parties s'engagent à collaborer de bonne foi pour résoudre tout litige à l'amiable avant tout recours judiciaire.</p>
+  </div>
+
+  <div class="cgv-article" id="art25">
+    <h2>Article 25 — Validité des clauses</h2>
+    <p>Si une clause est jugée invalide par une juridiction compétente, les autres clauses restent pleinement applicables.</p>
+  </div>
+
+  <div class="cgv-validation">
+    <h2>Validation client</h2>
+    <p>En passant commande, le client reconnaît avoir lu, compris et accepté l'intégralité des présentes CGV avant toute intervention réalisée dans le cadre de la marque <strong>Texticare</strong>, exploitée par <strong>Kinouclean SAS</strong>.</p>
+  </div>
+
+</div>
 </body>
 </html>
